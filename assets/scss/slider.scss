@@ -1,0 +1,121 @@
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// .swiper-slide {
+//   background-size: cover;
+//   background-position: center;
+// }
+
+.gallery-top {
+  // height: calc(80% - 30px);
+  height: 500px;
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+.gallery-thumbs {
+  height: 160px;
+  box-sizing: border-box;
+  // padding: 30px 0 0 0;
+  // margin-top: 20px;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.product_slider {
+  background: #F7F7F7;
+  // margin-top: 30px;
+  display: block;
+  width: 100%;
+  
+  .container2 {
+    display: block;
+    width: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-thumbs {
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+.product_slider .swiper-button-next, .product_slider .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #0C884C;
+}
+
+.product_slider .swiper-button-next:after, .product_slider .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: 14px;
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+}
+
+.product_slider .swiper-button-prev, .product_slider .swiper-container-rtl .swiper-button-next {
+  left: 0;
+}
+
+.product_slider .swiper-button-next, .product_slider .swiper-container-rtl .swiper-button-prev {
+  right: 0;
+}
+
+.swiper-slide:hover {
+  opacity: 1;
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: -70px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #0C884C !important;
+}
+
+@media screen and (max-width: 1300px) {
+  .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+      right: 0;
+  }
+}

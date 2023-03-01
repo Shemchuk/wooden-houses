@@ -1,0 +1,9 @@
+@import 'fonts';
+
+@mixin fontLatoLight {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 32px;
+}
