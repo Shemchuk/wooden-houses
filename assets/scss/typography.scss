@@ -7,3 +7,19 @@
   font-size: 48px;
   line-height: 32px;
 }
+
+@mixin fontLatoRegular {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin fontRobotoNormal {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+}

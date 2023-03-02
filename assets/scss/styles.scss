@@ -23,7 +23,7 @@
     .section__container {
       display: flex;
       flex-direction: row;
-      // width: 100%;
+      width: 100%;
       max-width: $desktop-content;
       margin: 0 auto;
 
@@ -36,6 +36,194 @@
         display: flex;
         width: 300px;
         min-width: 300px;
+      }
+    }
+
+    // house description at the up right corner 
+    .description-column {
+      padding: 20px 0 20px 32px;
+
+      .block-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text {
+          @include fontRobotoNormal;
+          color: $color_d;
+        }
+
+        &__button {
+          @include fontLatoRegular;
+          text-decoration-line: underline;
+          color: $color_gr;
+          cursor: pointer;
+        }
+      }
+
+      .block-content {
+        margin: 24px 0 0 0;
+
+        // блок "1. Технология строительства"
+        .tech-build {
+          margin-bottom: 24px;
+
+          .row-images {
+            display: flex;
+            padding: 2px 0;
+
+            .image-item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px 32px;
+              cursor: pointer;
+
+              &.active {
+                background: #EFF8E6;
+                border: 0.847826px solid #78A741;
+              }
+              
+              img {
+                height: 38px;
+              }
+            }
+          }
+
+          .row-text {
+            display: flex;
+            justify-content: space-evenly;
+
+            .text-item {
+              display: flex;
+              justify-content: center;
+              width: 50%;
+
+              @include fontRobotoNormal;
+              font-size: 14px;
+              line-height: 21px;
+
+              color: $color_sa;
+            }
+          }
+        }
+
+        // блок "2. Комплектация"
+        .complectation {
+          display: flex;
+          margin-bottom: 24px;
+
+          .complect-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 50%;
+            height: 40px;
+            border: 1px solid $color_gr;
+
+            @include fontRobotoNormal;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color_gr;
+            cursor: pointer;
+
+            &.active {
+              background: $color_gr;
+              border: 1px solid $color_gr;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        // блок "3. Дополнительные опции"
+        .additional-options {
+          .option-item {
+            // custom checkbox styles
+            .checkbox-container {
+              display: block;
+              position: relative;
+              padding-left: 35px;
+              margin-bottom: 12px;
+              cursor: pointer;
+              font-size: 22px;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+
+              /* Hide the browser's default checkbox */
+              & input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+
+              /* Create a custom checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 24px;
+                width: 24px;
+                // background-color: #eee;
+
+                background-image: url("../img/checkbox-unchecked.png");
+                background-size: cover;
+                background-position:center ;
+                background-repeat: no-repeat;
+              }
+
+              /* Create the checkmark/indicator (hidden when not checked) */
+              .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+
+                
+              }
+            }
+
+            /* On mouse-over, add a grey background color */
+            .checkbox-container:hover input ~ .checkmark {
+              // background-color: #ccc;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+
+            /* When the checkbox is checked, add a blue background */
+            .checkbox-container input:checked ~ .checkmark {
+              // background-color: #2196F3;
+              background-image: url("../img/checkbox-checked.png");
+
+            }
+
+            /* Show the checkmark when checked */
+            .checkbox-container input:checked ~ .checkmark:after {
+              display: block;
+            }
+            
+
+            /* Style the checkmark/indicator */
+            .checkbox-container .checkmark:after {
+              // background-image: url("../img/checkbox-checked.png");
+              // background-size: cover;
+              // background-position:center ;
+              // background-repeat: no-repeat;
+              // left: 9px;
+              // top: 5px;
+              // width: 5px;
+              // height: 10px;
+              // border: solid white;
+              // border-width: 0 3px 3px 0;
+              // -webkit-transform: rotate(45deg);
+              // -ms-transform: rotate(45deg);
+              // transform: rotate(45deg);
+            }
+
+          }
+        }
       }
     }
   }

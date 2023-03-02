@@ -143,6 +143,7 @@
 .section__description .section__container {
   display: flex;
   flex-direction: row;
+  width: 100%;
   max-width: 1189px;
   margin: 0 auto;
 }
@@ -154,6 +155,152 @@
   display: flex;
   width: 300px;
   min-width: 300px;
+}
+.section__description .description-column {
+  padding: 20px 0 20px 32px;
+}
+.section__description .description-column .block-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section__description .description-column .block-title__text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #361F0D;
+}
+.section__description .description-column .block-title__button {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration-line: underline;
+  color: #0C884C;
+  cursor: pointer;
+}
+.section__description .description-column .block-content {
+  margin: 24px 0 0 0;
+}
+.section__description .description-column .block-content .tech-build {
+  margin-bottom: 24px;
+}
+.section__description .description-column .block-content .tech-build .row-images {
+  display: flex;
+  padding: 2px 0;
+}
+.section__description .description-column .block-content .tech-build .row-images .image-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 32px;
+  cursor: pointer;
+}
+.section__description .description-column .block-content .tech-build .row-images .image-item.active {
+  background: #EFF8E6;
+  border: 0.847826px solid #78A741;
+}
+.section__description .description-column .block-content .tech-build .row-images .image-item img {
+  height: 38px;
+}
+.section__description .description-column .block-content .tech-build .row-text {
+  display: flex;
+  justify-content: space-evenly;
+}
+.section__description .description-column .block-content .tech-build .row-text .text-item {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #7C7C7C;
+}
+.section__description .description-column .block-content .complectation {
+  display: flex;
+  margin-bottom: 24px;
+}
+.section__description .description-column .block-content .complectation .complect-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  border: 1px solid #0C884C;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #0C884C;
+  cursor: pointer;
+}
+.section__description .description-column .block-content .complectation .complect-item.active {
+  background: #0C884C;
+  border: 1px solid #0C884C;
+  color: #FFFFFF;
+}
+.section__description .description-column .block-content .additional-options .option-item {
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.section__description .description-column .block-content .additional-options .option-item .checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* Create the checkmark/indicator (hidden when not checked) */
+}
+.section__description .description-column .block-content .additional-options .option-item .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.section__description .description-column .block-content .additional-options .option-item .checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/checkbox-unchecked.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section__description .description-column .block-content .additional-options .option-item .checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.section__description .description-column .block-content .additional-options .option-item .checkbox-container:hover input ~ .checkmark {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.section__description .description-column .block-content .additional-options .option-item .checkbox-container input:checked ~ .checkmark {
+  background-image: url("../img/checkbox-checked.png");
+}
+.section__description .description-column .block-content .additional-options .option-item .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
