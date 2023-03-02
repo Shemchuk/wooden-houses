@@ -250,18 +250,26 @@
   color: #FFFFFF;
 }
 .section__description .description-column .block-content .additional-options .option-item {
-  /* On mouse-over, add a grey background color */
-  /* When the checkbox is checked, add a blue background */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section__description .description-column .block-content .additional-options .option-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 .section__description .description-column .block-content .additional-options .option-item .checkbox-container {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #495057;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -269,6 +277,10 @@
   /* Hide the browser's default checkbox */
   /* Create a custom checkbox */
   /* Create the checkmark/indicator (hidden when not checked) */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
 }
 .section__description .description-column .block-content .additional-options .option-item .checkbox-container input {
   position: absolute;
@@ -293,14 +305,38 @@
   position: absolute;
   display: none;
 }
-.section__description .description-column .block-content .additional-options .option-item .checkbox-container:hover input ~ .checkmark {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 .section__description .description-column .block-content .additional-options .option-item .checkbox-container input:checked ~ .checkmark {
   background-image: url("../img/checkbox-checked.png");
 }
 .section__description .description-column .block-content .additional-options .option-item .checkbox-container input:checked ~ .checkmark:after {
   display: block;
+}
+.section__description .description-column .block-content .additional-options .option-item__button {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #0C884C;
+  cursor: pointer;
+}
+.section__description .description-column .block-content .additional-options .option-item__button.hidden {
+  display: none;
+}
+.section__description .description-column .block-content .additional-options .option-item__price {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #361F0D;
+}
+.section__description .description-column .block-content .additional-options .option-item__price.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
