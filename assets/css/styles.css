@@ -453,4 +453,158 @@
   }
 }
 
+.section__product-tabs {
+  margin: 0 auto;
+}
+.section__product-tabs .section__wrapper {
+  box-sizing: content-box;
+  max-width: 1189px;
+  margin: 0 32px;
+}
+@media (max-width: 768px) {
+  .section__product-tabs .section__wrapper {
+    margin: 0 16px;
+  }
+}
+.section__product-tabs .product-tabs__container {
+  display: flex;
+  flex-direction: row;
+  background: #F8F8F8;
+  margin: 60px 0px 30px;
+  height: 45px;
+}
+@media (max-width: 1200px) {
+  .section__product-tabs .product-tabs__container {
+    flex-direction: column;
+    height: unset;
+  }
+}
+@media (max-width: 768px) {
+  .section__product-tabs .product-tabs__container {
+    margin: 60px 0px 30px;
+  }
+}
+.section__product-tabs .product-tabs__container .product-tab__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  height: 100%;
+  padding: 0 32px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #10252E;
+  text-decoration: none;
+}
+.section__product-tabs .product-tabs__container .product-tab__item.active {
+  color: white;
+  background: #0C884C;
+}
+@media (max-width: 1200px) {
+  .section__product-tabs .product-tabs__container .product-tab__item {
+    height: 45px;
+  }
+}
+.section__product-tabs .table__container {
+  margin-bottom: 60px;
+}
+.section__product-tabs .table__container .table__header {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 52px;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #361F0D;
+  margin-bottom: 30px;
+}
+.section__product-tabs .table__container .table__content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  border: 1px solid #AAABAC;
+  border-width: 0 0 1px 0;
+}
+.section__product-tabs .table__container .table__content .table__row {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .section__product-tabs .table__container .table__content .table__row {
+    flex-direction: column;
+  }
+}
+.section__product-tabs .table__container .table__content .table__row .table__cell-header {
+  display: flex;
+  align-items: center;
+  flex: 1 0 35%;
+  padding: 32px 32px 32px 70px;
+  border: 1px solid #AAABAC;
+  border-width: 1px 1px 0 1px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: black;
+}
+@media (max-width: 1200px) {
+  .section__product-tabs .table__container .table__content .table__row .table__cell-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.section__product-tabs .table__container .table__content .table__row .table__cell-content {
+  display: flex;
+  flex: 1 1 65%;
+  align-items: center;
+  padding: 20px 32px;
+  border: 1px solid #AAABAC;
+  border-width: 1px 1px 0 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #7C7C7C;
+}
+@media (max-width: 1200px) {
+  .section__product-tabs .table__container .table__content .table__row .table__cell-content {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-left-width: 1px;
+  }
+}
+.section__product-tabs .table__container .table__price-title {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #0C884C;
+  margin-bottom: 12px;
+}
+.section__product-tabs .table__container .table__price-text {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 24px;
+  line-height: 24px;
+  color: #0C884C;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=styles.css.map */
