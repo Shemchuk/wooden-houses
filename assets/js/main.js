@@ -20,7 +20,7 @@ $(document).ready(function () {
       },
   });
 
-  console.log(galleryThumbsProduct);
+  // console.log(galleryThumbsProduct);
 
   var galleryTopProduct = new Swiper('.product_slider .gallery-top', {
       spaceBetween: 10,
@@ -34,11 +34,6 @@ $(document).ready(function () {
           swiper: galleryThumbsProduct,
       },
   });
-
-  console.log(galleryTopProduct);
-
-
-
 
 });
 

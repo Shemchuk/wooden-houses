@@ -3,7 +3,7 @@
 @import 'slider';
 
 .page__title {
-  padding: 30px 0 52px 0;
+  padding: 30px 32px 52px 32px;
   display: flex;
   width: 100%;
   max-width: $desktop-content;
@@ -12,13 +12,27 @@
   @include fontLatoLight;
   text-transform: uppercase;
   color: $color_d;
+
+  @media (max-width: $mobile) {
+    font-size: 30px;
+    line-height: 32px;
+    padding: 30px 16px 52px 16px;
+    // word-break:
+  }
 }
 
 
 .section {
   &__description {    
     display: flex;
+    flex-direction: column;
     background-color: #F7F7F7;
+    padding: 0 32px;
+
+    @media (max-width: $mobile) {
+      padding: 0 16px;
+      // word-break:
+    }
 
     .section__container {
       display: flex;
@@ -264,5 +278,108 @@
         }
       }
     }
+
+    .column_6 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 60px;
+      padding-bottom: 50px;
+      
+      .column_6 .item {
+        width: 14%;
+      }
+      
+      .item {
+        .title {
+          @include fontLatoRegular;
+          font-size: 18px;
+          line-height: 24px;
+          color: $color_w;
+          margin-bottom: 12px;
+
+          @media (max-width: $mobile) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+        
+        .text {
+          @include fontLatoBold;
+          font-size: 24px;
+          line-height: 24px;
+          color: $color_w;
+
+          @media (max-width: $mobile) {
+            font-size: 22px;
+            line-height: 22px;
+          }
+        }
+
+        // last column with the price and discount values
+        &.item-price {
+          display: flex;
+          // justify-content: end;
+          align-items: center;
+          
+          // .title {
+
+          // }
+
+          .text {
+            position: relative;
+            @include fontLatoBold;
+            font-size: 36px;
+            line-height: 36px;
+            text-transform: uppercase;
+            color: $color_gr;
+            white-space: nowrap;
+
+            &-discount {
+              position: absolute;
+              right: 0;
+              top: -30px;
+
+              @include fontRobotoNormal;
+              font-size: 14px;
+              line-height: 16px;
+              text-align: right;
+              text-decoration-line: line-through;
+              color: $color_sa;
+              margin-bottom: unset;
+
+              @media (max-width: $mobile) {
+                font-size: 10px;
+                line-height: 12px;
+              }
+
+            }
+
+            @media (max-width: $mobile) {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+  
+    }
+    
+
+    @media screen and (max-width: 1200px) {
+      .column_6 .item {
+        width: 30%;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .column_6 .item {
+        width: 49%;
+      }
+    }
+
+
   }
 }
