@@ -1,0 +1,1 @@
+For page need only the index.html html and assets folder (without scss folder)
