@@ -18,13 +18,11 @@
 }
 .swiper-container {
   width: 100%;
-  height: 300px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .gallery-top {
-  height: 500px;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -45,10 +43,6 @@
 
 .product_slider {
   background: #F7F7F7;
-  display: block;
-  width: 100%;
-}
-.product_slider .container2 {
   display: block;
   width: 100%;
 }
@@ -146,32 +140,65 @@
 .section__description {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #F7F7F7;
-  padding: 0 32px;
+}
+.section__description .section__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1189px;
+  margin: 0 32px;
+  width: 100%;
+}
+@media (max-width: 1253px) {
+  .section__description .section__wrapper {
+    padding: 0 32px;
+    margin: 0;
+  }
 }
 @media (max-width: 768px) {
-  .section__description {
-    padding: 0 16px;
+  .section__description .section__wrapper {
+    margin: 0 16px;
   }
 }
 .section__description .section__container {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 1189px;
-  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .section__description .section__container {
+    flex-direction: column;
+  }
 }
 .section__description .section__container .left-block {
   display: flex;
   width: calc(100% - 300px);
+}
+@media (max-width: 768px) {
+  .section__description .section__container .left-block {
+    width: 100%;
+  }
 }
 .section__description .section__container .right-block {
   display: flex;
   width: 300px;
   min-width: 300px;
 }
+@media (max-width: 768px) {
+  .section__description .section__container .right-block {
+    width: 100%;
+  }
+}
 .section__description .description-column {
   padding: 20px 0 20px 32px;
+}
+@media (max-width: 768px) {
+  .section__description .description-column {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 .section__description .description-column .block-title {
   display: flex;
@@ -219,6 +246,11 @@
 }
 .section__description .description-column .block-content .tech-build .row-images .image-item img {
   height: 38px;
+}
+@media (max-width: 768px) {
+  .section__description .description-column .block-content .tech-build .row-images .image-item {
+    width: 50%;
+  }
 }
 .section__description .description-column .block-content .tech-build .row-text {
   display: flex;
@@ -400,6 +432,11 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 1200px) {
+  .section__description .column_6 .item.item-price {
+    align-items: end;
+  }
+}
 .section__description .column_6 .item.item-price .text {
   position: relative;
   font-family: "Lato", sans-serif;
@@ -454,6 +491,8 @@
 }
 
 .section__product-tabs {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
 .section__product-tabs .section__wrapper {

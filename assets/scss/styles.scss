@@ -26,36 +26,78 @@
   &__description {    
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     background-color: #F7F7F7;
-    padding: 0 32px;
+    // padding: 0 32px;
+    // padding: 0 32px;
 
     @media (max-width: $mobile) {
-      padding: 0 16px;
-      // word-break:
+      // padding: 0 16px;
+    }
+
+    .section__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      // box-sizing: content-box;
+      max-width: $desktop-content;
+      margin: 0 32px;
+      // padding: 0 32px;
+
+      width: 100%;
+
+      @media (max-width: calc($desktop-content + 64px)) {
+        padding: 0 32px;
+        margin: 0;
+      }
+
+      @media (max-width: $mobile) {
+        margin: 0 16px;
+      }
     }
 
     .section__container {
       display: flex;
       flex-direction: row;
       width: 100%;
-      max-width: $desktop-content;
-      margin: 0 auto;
+      // max-width: $desktop-content;
+      // margin: 0 auto;
+
+      
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
 
       .left-block {
         display: flex;
         width: calc(100% - 300px);
+
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
       }
 
       .right-block {
         display: flex;
         width: 300px;
         min-width: 300px;
+
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
       }
     }
 
     // house description at the up right corner 
     .description-column {
       padding: 20px 0 20px 32px;
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        padding-left: 0;
+      }
 
       .block-title {
         display: flex;
@@ -100,6 +142,10 @@
               
               img {
                 height: 38px;
+              }
+
+              @media (max-width: $mobile) {
+                width: 50%;
               }
             }
           }
@@ -320,12 +366,11 @@
         // last column with the price and discount values
         &.item-price {
           display: flex;
-          // justify-content: end;
           align-items: center;
           
-          // .title {
-
-          // }
+          @media (max-width: $tablet) {
+            align-items: end;
+          }
 
           .text {
             position: relative;
@@ -386,6 +431,8 @@
 
 .section__product-tabs {
   // max-width: $desktop-content;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   
   .section__wrapper {
