@@ -129,6 +129,9 @@
   text-transform: uppercase;
   color: #361F0D;
 }
+.page__title.feedback {
+  padding-top: 57px;
+}
 @media (max-width: 768px) {
   .page__title {
     font-size: 30px;
@@ -515,7 +518,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .column-bottom-5 .item {
     width: 30%;
     margin-bottom: 40px;
@@ -526,6 +529,74 @@
     width: 49%;
   }
 }
+.section__feedback {
+  display: flex;
+  width: 100%;
+}
+.section__feedback .feedback-slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.section__feedback .feedback-slider .swiper-slide {
+  display: flex;
+  max-width: 640px;
+}
+@media (max-width: 768px) {
+  .section__feedback .feedback-slider .swiper-slide {
+    max-width: unset;
+  }
+}
+.section__feedback .feedback-slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+.section__feedback .feedback-slider .swiper-slide > .slide-wrapper .feedback-content__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  position: relative;
+  margin-top: 74px;
+  padding: 16px;
+}
+@media (max-width: 768px) {
+  .section__feedback .feedback-slider .swiper-slide > .slide-wrapper .feedback-content__wrapper {
+    max-width: unset;
+  }
+}
+.section__feedback .feedback-slider .swiper-slide > .slide-wrapper .feedback-content__wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+.section__feedback .feedback-slider .swiper-slide > .slide-wrapper .feedback-content__wrapper .feedback-content {
+  margin-bottom: 25px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #514D4A;
+}
+.section__feedback .feedback-slider .swiper-slide > .slide-wrapper .feedback-content__wrapper .feedback-author {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #361F0D;
+}
+
 .section__product-tabs {
   display: flex;
   justify-content: center;

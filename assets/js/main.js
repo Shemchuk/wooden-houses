@@ -35,5 +35,36 @@ $(document).ready(function () {
       },
   });
 
+
+  var feedbackSlider = new Swiper('.feedback-slider', {
+      loop: true,
+      // loopedSlides: 5, //looped slides should be the same
+
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 150,
+      
+      breakpoints: {
+        240: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: "auto",
+          spaceBetween: 80,
+        },
+        1024: {
+          slidesPerView: "auto",
+          spaceBetween: 100,
+        },
+        1280: {
+          slidesPerView: "auto",
+          spaceBetween: 120,
+        },
+    },
+  });
+
 });
 
