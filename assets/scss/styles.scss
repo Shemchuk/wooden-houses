@@ -2,8 +2,16 @@
 @import 'variables';
 @import 'slider';
 
+div.content-wrapper {
+  margin: 0 32px;
+
+  @media (max-width: $mobile) {
+    margin: 0 16px;
+  }
+}
+
 .page__title {
-  padding: 30px 32px 52px 32px;
+  padding: 30px 0 52px 0;
   display: flex;
   width: 100%;
   max-width: $desktop-content;
@@ -13,6 +21,8 @@
   text-transform: uppercase;
   color: $color_d;
 
+  position: relative;
+
   &.feedback {
     padding-top: 57px;
   }
@@ -20,10 +30,36 @@
   @media (max-width: $mobile) {
     font-size: 30px;
     line-height: 32px;
-    padding: 30px 16px 52px 16px;
+    // padding: 30px 16px 52px 16px;
     // word-break:
   }
+
+  .arrows-block {
+    // padding: 0 32px; 
+    // margin: 0 32px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+
+    .arrows-block__wrapper {
+      display: flex;
+      justify-content: space-between;
+  
+      img {
+        width: 152px;
+      }
+    
+      a:first-child {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
 }
+
 
 
 .section {
