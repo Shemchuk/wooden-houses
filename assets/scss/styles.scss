@@ -500,10 +500,11 @@
 
     .swiper-slide > .slide-wrapper {
 
+      height: 100%;;
+
       .feedback-content__wrapper {
         display: flex;
         flex-direction: column;
-        max-width: 640px;
 
         position: relative;
         margin-top: 74px;
@@ -511,6 +512,7 @@
 
         @media (max-width: $mobile) {
           max-width: unset;
+          margin-top: 32px;
         }
 
         img {
