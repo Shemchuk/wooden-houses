@@ -188,135 +188,7 @@
       }
     }
 
-    // блок "Дополнительные опции"
-    .additional-options {
-      .option-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
 
-        &:not(:last-child) {
-          margin-bottom: 15px;
-        }
-
-        // custom checkbox styles
-        .checkbox-container {
-          display: block;
-          position: relative;
-          padding-left: 35px;
-          margin-right: 12px;
-
-          // margin-bottom: 12px;
-          cursor: pointer;
-
-          @include fontLatoRegular;
-          font-size: 14px;
-          line-height: 24px;
-          color: $color_gray4;
-          
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-
-          /* Hide the browser's default checkbox */
-          & input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-          }
-
-          /* Create a custom checkbox */
-          .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 24px;
-            width: 24px;
-            // background-color: #eee;
-
-            background-image: url("../img/checkbox-unchecked.png");
-            background-size: cover;
-            background-position:center ;
-            background-repeat: no-repeat;
-          }
-
-          /* Create the checkmark/indicator (hidden when not checked) */
-          .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;               
-          }
-
-          /* On mouse-over, add a grey background color */
-          &:hover input ~ .checkmark {
-            // background-color: #ccc;
-            // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          }
-
-          /* When the checkbox is checked, add a blue background */
-          input:checked ~ .checkmark {
-            // background-color: #2196F3;
-            background-image: url("../img/checkbox-checked.png");
-
-          }
-
-          /* Show the checkmark when checked */
-          input:checked ~ .checkmark:after {
-            display: block;
-          }
-          
-
-          /* Style the checkmark/indicator */
-          .checkmark:after {
-            // background-image: url("../img/checkbox-checked.png");
-            // background-size: cover;
-            // background-position:center ;
-            // background-repeat: no-repeat;
-            // left: 9px;
-            // top: 5px;
-            // width: 5px;
-            // height: 10px;
-            // border: solid white;
-            // border-width: 0 3px 3px 0;
-            // -webkit-transform: rotate(45deg);
-            // -ms-transform: rotate(45deg);
-            // transform: rotate(45deg);
-          }
-
-        }
-
-        // right part of the checkbox - button Вкл
-        &__button {
-          @include fontLatoRegular;
-          font-size: 12px;
-          line-height: 14px;
-
-          color: $color_gr;
-          cursor: pointer;
-
-          &.hidden {
-            display: none;
-          }
-        }
-
-        // right part of the checkbox - the price
-        &__price {
-          @include fontLatoRegular;
-          font-size: 12px;
-          line-height: 14px;
-          white-space: nowrap;
-
-          color: $color_d;
-
-          &.hidden {
-            display: none;
-          }
-        }
-      }
-    }
 
     // last column with the price and discount values
     &.block-content__price {
@@ -413,6 +285,138 @@
   }
 }
 
+// блок "Дополнительные опции"
+.additional-options {
+  width: 100%;
+
+  .option-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    // custom checkbox styles
+    .checkbox-container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-right: 12px;
+
+      // margin-bottom: 12px;
+      cursor: pointer;
+
+      @include fontLatoRegular;
+      font-size: 14px;
+      line-height: 24px;
+      color: $color_gray4;
+      
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      /* Hide the browser's default checkbox */
+      & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        // background-color: #eee;
+
+        background-image: url("../img/checkbox-unchecked.png");
+        background-size: cover;
+        background-position:center ;
+        background-repeat: no-repeat;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;               
+      }
+
+      /* On mouse-over, add a grey background color */
+      &:hover input ~ .checkmark {
+        // background-color: #ccc;
+        // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      input:checked ~ .checkmark {
+        // background-color: #2196F3;
+        background-image: url("../img/checkbox-checked.png");
+
+      }
+
+      /* Show the checkmark when checked */
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+      
+
+      /* Style the checkmark/indicator */
+      .checkmark:after {
+        // background-image: url("../img/checkbox-checked.png");
+        // background-size: cover;
+        // background-position:center ;
+        // background-repeat: no-repeat;
+        // left: 9px;
+        // top: 5px;
+        // width: 5px;
+        // height: 10px;
+        // border: solid white;
+        // border-width: 0 3px 3px 0;
+        // -webkit-transform: rotate(45deg);
+        // -ms-transform: rotate(45deg);
+        // transform: rotate(45deg);
+      }
+
+    }
+
+    // right part of the checkbox - button Вкл
+    &__button {
+      @include fontLatoRegular;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: $color_gr;
+      cursor: pointer;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    // right part of the checkbox - the price
+    &__price {
+      @include fontLatoRegular;
+      font-size: 12px;
+      line-height: 14px;
+      white-space: nowrap;
+
+      color: $color_d;
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
+
 .column-bottom-5 {
   display: flex;
   flex-wrap: wrap;
@@ -491,6 +495,7 @@
         display: block;
         width: 100%;
         height: 100%;
+        // height: 360px;
         max-height: 360px;
         // max-width: 640px;
   
@@ -513,6 +518,18 @@
         @media (max-width: $mobile) {
           max-width: unset;
           margin-top: 32px;
+        }
+
+        .quote-icon {
+          position: absolute;
+          width: 38.5px;
+          height: 33.2px;
+          left: 8px;
+          top: -12px;
+          background-image: url("../img/quote.svg");
+          background-size: cover;
+          background-position:center ;
+          background-repeat: no-repeat;
         }
 
         img {
@@ -573,7 +590,7 @@
     flex-direction: row;
     background: $color_bg;
 
-    margin: 60px 0px 30px;
+    margin: 60px 0px 0px;
     // padding: 0 32px;
 
     height: 45px;
@@ -584,7 +601,7 @@
     }
 
     @media (max-width: $mobile) {
-      margin: 60px 0px 30px;
+      margin: 32px 0px 0px;
     }
 
     .product-tab__item {
@@ -622,6 +639,36 @@
     }
   }
 
+  .complectation-container {
+    display: none;
+    // width: 100%;
+    height: 63px;
+    border: 1px solid $color_gr;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    &.show {
+      display: flex;
+    }
+
+    .complectation__item {
+      display: flex;
+      flex: 1 1 50%;
+      justify-content: center;
+      align-items: center;
+
+      @include fontLatoRegular;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color_w;
+
+      &.active {
+        color: $color_gr;
+        background-color: rgba(12, 136, 76, 0.2);
+      }
+    }
+  }
+
   .table__container {
     margin-bottom: 60px;
 
@@ -635,10 +682,20 @@
       margin-bottom: 30px;
     }
 
+    .table__description {
+      @include fontLatoRegular;
+      font-size: 18px;
+      line-height: 24px;
+      color: $color_w;
+
+      margin-bottom: 30px;
+    }
+
+
     .table__content {
       display: flex;
       flex-direction: column;
-      margin-bottom: 16px;
+      margin-bottom: 100px;
       border: 1px solid $color_border;
       border-width: 0 0 1px 0;
 
@@ -697,6 +754,58 @@
       }
     }
 
+    .table__options {
+      display: flex;
+      margin-bottom: 42px;
+      gap: 32px; 
+
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
+
+      .options-container {
+        display: flex;
+        flex: 1 1 40%;
+      }
+
+      .options-description {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 60%;
+        background-color: $color_gr;
+        color: white;
+        padding: 20px 24px 30px;
+
+        &__text {
+          @include fontLatoRegular;
+          font-size: 18px;
+          line-height: 20px;
+          margin-bottom: 24px;
+        }
+
+        &__images {
+          display: flex;
+          gap: 26px;
+
+          img {
+            max-height: 134px;
+            object-fit: cover;
+          }
+
+          @media (max-width: 640px) {
+            flex-direction: column;
+            img {
+              max-height: unset;
+              width: 100%;
+            
+            }
+          }
+        }
+
+
+      }
+    }
+
     .table__price {
       &-title {
         @include fontLatoRegular;
@@ -711,7 +820,6 @@
         font-size: 24px;
         line-height: 24px;  
         color: $color_gr;
-        text-transform: uppercase;
       }
     }
   }

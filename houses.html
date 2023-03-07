@@ -307,6 +307,7 @@
           <div class="slide-wrapper">
             <img src="./assets/img/feedback-slider-1.png" alt="slide">
             <div class="feedback-content__wrapper">
+              <div class="quote-icon"></div>
               <div class="feedback-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi natus odio laborum, eum aperiam dolorum eligendi? Voluptatibus sapiente eaque debitis eos sequi neque
               </div>
               <div class="feedback-author">Екатерина Гагарина</div>
@@ -318,6 +319,7 @@
           <div class="slide-wrapper">
             <img src="./assets/img/feedback-slider-2.png" alt="slide">
             <div class="feedback-content__wrapper">
+              <div class="quote-icon"></div>
               <div class="feedback-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi natus odio laborum, eum aperiam dolorum eligendi? Voluptatibus sapiente eaque debitis eos sequi neque
               </div>
               <div class="feedback-author">Екатерина Гагарина</div>
@@ -329,6 +331,7 @@
           <div class="slide-wrapper">
             <img src="./assets/img/feedback-slider-3.png" alt="slide">
             <div class="feedback-content__wrapper">
+              <div class="quote-icon"></div>
               <div class="feedback-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi natus odio laborum, eum aperiam dolorum eligendi? Voluptatibus sapiente eaque debitis eos sequi neque
               </div>
               <div class="feedback-author">Екатерина Гагарина</div>
@@ -348,81 +351,131 @@
         <a href="#" class="product-tab__item">Планировка</a>
         <a href="#" class="product-tab__item active">Комплектация</a>
         <a href="#" class="product-tab__item">Варианты планировок</a>
-        <a href="#" class="product-tab__item">Фундамент</a>
         <a href="#" class="product-tab__item">Реализации</a>
       </div>
 
-  
-      <!-- first table -->
-      <div class="table__container">
-        <div class="table__header">Комплектация под усадку</div>
-        
-        <div class="table__content">
-          <div class="table__row">
-            <div class="table__cell-header">Фундамент</div>
-            <div class="table__cell-content">В данную комплектацию фундамент не входит, выбор фундамента зависит от типа грунта и рельефа участка</div>
-          </div>
-  
-          <div class="table__row">
-            <div class="table__cell-header">Стены и перегородки</div>
-            <div class="table__cell-content">Заводской стеновой домокомплект: строганный профилированный брус, сечением 150х150мм / 150х200мм / 200х200мм, собирается по технологии «в чашу» на березовые нагеля, межвенцовый утеплитель — джутовое волокно.
-            </div>
-          </div>
-  
-          <div class="table__row">
-            <div class="table__cell-header">Межэтажные перекрытия</div>
-            <div class="table__cell-content">Лаги перекрытия пола — брус 100х200мм, расстояние между лаг 590мм.
-            </div>
-          </div>
-  
-          <div class="table__row">
-            <div class="table__cell-header">Стропильная система и кровля</div>
-            <div class="table__cell-content">Стропила — доска 50х200мм, расстояние между стропил 590мм, контробрешетка – брус 50х50мм, обрешетка — доска 25х150мм, подкровельная гидроизоляция — Изоспан AQ—prof. Покрытие кровли — металлочерепица.</div>
-          </div>
-  
-        </div>
-        
-        <div class="table__price">
-          <div class="table__price-title">Стоимость</div>
-          <div class="table__price-text">190 456 руб</div>
-        </div>
-      </div>
-  
-      <!-- second table -->
-      <div class="table__container">
-        <div class="table__header">Комплектация с отделкой</div>
-        
-        <div class="table__content">
-          <div class="table__row">
-            <div class="table__cell-header">Фундамент</div>
-            <div class="table__cell-content">В данную комплектацию фундамент не входит, выбор фундамента зависит от типа грунта и рельефа участка</div>
-          </div>
-  
-          <div class="table__row">
-            <div class="table__cell-header">Стены и перегородки</div>
-            <div class="table__cell-content">Заводской стеновой домокомплект: строганный профилированный брус, сечением 150х150мм / 150х200мм / 200х200мм, собирается по технологии «в чашу» на березовые нагеля, межвенцовый утеплитель — джутовое волокно.
-            </div>
-          </div>
-  
-          <div class="table__row">
-            <div class="table__cell-header">Межэтажные перекрытия</div>
-            <div class="table__cell-content">Лаги перекрытия пола — брус 100х200мм, расстояние между лаг 590мм.
-            </div>
-          </div>
-  
-          <div class="table__row">
-            <div class="table__cell-header">Стропильная система и кровля</div>
-            <div class="table__cell-content">Стропила — доска 50х200мм, расстояние между стропил 590мм, контробрешетка – брус 50х50мм, обрешетка — доска 25х150мм, подкровельная гидроизоляция — Изоспан AQ—prof. Покрытие кровли — металлочерепица.</div>
-          </div>
-  
-        </div>
-        
-        <div class="table__price">
-          <div class="table__price-title">Стоимость</div>
-          <div class="table__price-text">290 456 руб</div>
-        </div>
+      <div class="complectation-container show">
+        <div class="complectation__item active">Каркас</div>
+        <div class="complectation__item">Теплый контур</div>
       </div>
 
+      <!-- first table -->
+      <div class="table__container">
+        <!-- <div class="table__header">Комплектация под усадку</div> -->
+        <div class="table__description">Дом подойдет вам, если вы рассматриваете только летнее проживание
+        </div>
+
+        <div class="table__content">
+          <div class="table__row">
+            <div class="table__cell-header">Фундамент</div>
+            <div class="table__cell-content">В данную комплектацию фундамент не входит, выбор фундамента зависит от типа грунта и рельефа участка</div>
+          </div>
+  
+          <div class="table__row">
+            <div class="table__cell-header">Стены и перегородки</div>
+            <div class="table__cell-content">Заводской стеновой домокомплект: строганный профилированный брус, сечением 150х150мм / 150х200мм / 200х200мм, собирается по технологии «в чашу» на березовые нагеля, межвенцовый утеплитель — джутовое волокно.
+            </div>
+          </div>
+  
+          <div class="table__row">
+            <div class="table__cell-header">Межэтажные перекрытия</div>
+            <div class="table__cell-content">Лаги перекрытия пола — брус 100х200мм, расстояние между лаг 590мм.
+            </div>
+          </div>
+  
+          <div class="table__row">
+            <div class="table__cell-header">Стропильная система и кровля</div>
+            <div class="table__cell-content">Стропила — доска 50х200мм, расстояние между стропил 590мм, контробрешетка – брус 50х50мм, обрешетка — доска 25х150мм, подкровельная гидроизоляция — Изоспан AQ—prof. Покрытие кровли — металлочерепица.</div>
+          </div>
+  
+        </div>
+
+        <div class="table__description">К данной комплектации вы всегда можете добавить дополнительные опции
+        </div>
+
+        <div class="table__options">
+          <div class="options-container">
+            <div class="additional-options">
+              <div class="option-item">
+                <label class="checkbox-container">Перепланировка
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                </label>
+
+                <div class="option-item__button">Вкл</div>
+                <div class="option-item__price hidden">
+                  + от 12 050 р/м2
+                </div>
+              </div>
+
+              <div class="option-item">
+                <label class="checkbox-container">Терраса
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <div class="option-item__button hidden">Вкл</div>
+                <div class="option-item__price">
+                  + от 12 050 р/м<sup>2</sup>
+                </div>
+              </div>
+
+              <div class="option-item">
+                <label class="checkbox-container">Панорамные окна
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <div class="option-item__button hidden">Вкл</div>
+                <div class="option-item__price">
+                  + от 12 050 р/м<sup>2</sup>
+                </div>
+              </div>
+
+              <div class="option-item">
+                <label class="checkbox-container">Перепланировка
+                  <input type="checkbox" >
+                  <span class="checkmark"></span>
+                </label>
+
+                <div class="option-item__button">Вкл</div>
+                <div class="option-item__price hidden">
+                  + от 12 050 р/м2
+                </div>
+              </div>
+
+              <div class="option-item">
+                <label class="checkbox-container">Терраса
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+
+                <div class="option-item__button hidden">Вкл</div>
+                <div class="option-item__price">
+                  + от 12 050 р/м<sup>2</sup>
+                </div>
+              </div>              
+
+            </div>
+          </div>
+          
+          <div class="options-description">
+            <div class="options-description__text">
+              В данную комплектацию фундамент не входит, выбор фундамента зависит от типа грунта и рельефа участка.
+            </div>
+            <div class="options-description__images">
+              <img src="./assets/img/house.png" alt="house">
+              <img src="./assets/img/house.png" alt="house">
+            </div>
+          </div>
+        </div>
+        
+        <div class="table__price">
+          <!-- <div class="table__price-title">Стоимость</div> -->
+          <div class="table__price-text">Цена: от 190 456 РУБ</div>
+        </div>
+      </div>
+  
     </div>
   </section>
 

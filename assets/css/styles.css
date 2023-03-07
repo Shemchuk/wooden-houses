@@ -286,97 +286,6 @@
   cursor: pointer;
   margin-top: 8px;
 }
-.description-column .block-content .additional-options .option-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.description-column .block-content .additional-options .option-item:not(:last-child) {
-  margin-bottom: 15px;
-}
-.description-column .block-content .additional-options .option-item .checkbox-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-right: 12px;
-  cursor: pointer;
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  font-size: 14px;
-  line-height: 24px;
-  color: #495057;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Hide the browser's default checkbox */
-  /* Create a custom checkbox */
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* On mouse-over, add a grey background color */
-  /* When the checkbox is checked, add a blue background */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */
-}
-.description-column .block-content .additional-options .option-item .checkbox-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.description-column .block-content .additional-options .option-item .checkbox-container .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/checkbox-unchecked.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.description-column .block-content .additional-options .option-item .checkbox-container .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.description-column .block-content .additional-options .option-item .checkbox-container input:checked ~ .checkmark {
-  background-image: url("../img/checkbox-checked.png");
-}
-.description-column .block-content .additional-options .option-item .checkbox-container input:checked ~ .checkmark:after {
-  display: block;
-}
-.description-column .block-content .additional-options .option-item__button {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  font-size: 12px;
-  line-height: 14px;
-  color: #0C884C;
-  cursor: pointer;
-}
-.description-column .block-content .additional-options .option-item__button.hidden {
-  display: none;
-}
-.description-column .block-content .additional-options .option-item__price {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  font-size: 12px;
-  line-height: 14px;
-  white-space: nowrap;
-  color: #361F0D;
-}
-.description-column .block-content .additional-options .option-item__price.hidden {
-  display: none;
-}
 .description-column .block-content.block-content__price {
   display: flex;
   flex-direction: column;
@@ -472,6 +381,101 @@
   color: #0C884C;
   white-space: nowrap;
   text-decoration-line: underline;
+}
+
+.additional-options {
+  width: 100%;
+}
+.additional-options .option-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.additional-options .option-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.additional-options .option-item .checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #495057;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+.additional-options .option-item .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.additional-options .option-item .checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/checkbox-unchecked.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.additional-options .option-item .checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.additional-options .option-item .checkbox-container input:checked ~ .checkmark {
+  background-image: url("../img/checkbox-checked.png");
+}
+.additional-options .option-item .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.additional-options .option-item__button {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #0C884C;
+  cursor: pointer;
+}
+.additional-options .option-item__button.hidden {
+  display: none;
+}
+.additional-options .option-item__price {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 12px;
+  line-height: 14px;
+  white-space: nowrap;
+  color: #361F0D;
+}
+.additional-options .option-item__price.hidden {
+  display: none;
 }
 
 .column-bottom-5 {
@@ -570,6 +574,17 @@
     margin-top: 32px;
   }
 }
+.section__feedback .feedback-slider .swiper-slide > .slide-wrapper .feedback-content__wrapper .quote-icon {
+  position: absolute;
+  width: 38.5px;
+  height: 33.2px;
+  left: 8px;
+  top: -12px;
+  background-image: url("../img/quote.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .section__feedback .feedback-slider .swiper-slide > .slide-wrapper .feedback-content__wrapper img {
   display: block;
   width: 100%;
@@ -619,7 +634,7 @@
   display: flex;
   flex-direction: row;
   background: #F8F8F8;
-  margin: 60px 0px 30px;
+  margin: 60px 0px 0px;
   height: 45px;
 }
 @media (max-width: 1200px) {
@@ -630,7 +645,7 @@
 }
 @media (max-width: 768px) {
   .section__product-tabs .product-tabs__container {
-    margin: 60px 0px 30px;
+    margin: 32px 0px 0px;
   }
 }
 .section__product-tabs .product-tabs__container .product-tab__item {
@@ -662,6 +677,34 @@
     height: 45px;
   }
 }
+.section__product-tabs .complectation-container {
+  display: none;
+  height: 63px;
+  border: 1px solid #0C884C;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.section__product-tabs .complectation-container.show {
+  display: flex;
+}
+.section__product-tabs .complectation-container .complectation__item {
+  display: flex;
+  flex: 1 1 50%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #10252E;
+}
+.section__product-tabs .complectation-container .complectation__item.active {
+  color: #0C884C;
+  background-color: rgba(12, 136, 76, 0.2);
+}
 .section__product-tabs .table__container {
   margin-bottom: 60px;
 }
@@ -677,10 +720,21 @@
   color: #361F0D;
   margin-bottom: 30px;
 }
+.section__product-tabs .table__container .table__description {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #10252E;
+  margin-bottom: 30px;
+}
 .section__product-tabs .table__container .table__content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 100px;
   border: 1px solid #AAABAC;
   border-width: 0 0 1px 0;
 }
@@ -733,6 +787,55 @@
     border-left-width: 1px;
   }
 }
+.section__product-tabs .table__container .table__options {
+  display: flex;
+  margin-bottom: 42px;
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .section__product-tabs .table__container .table__options {
+    flex-direction: column;
+  }
+}
+.section__product-tabs .table__container .table__options .options-container {
+  display: flex;
+  flex: 1 1 40%;
+}
+.section__product-tabs .table__container .table__options .options-description {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 60%;
+  background-color: #0C884C;
+  color: white;
+  padding: 20px 24px 30px;
+}
+.section__product-tabs .table__container .table__options .options-description__text {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+.section__product-tabs .table__container .table__options .options-description__images {
+  display: flex;
+  gap: 26px;
+}
+.section__product-tabs .table__container .table__options .options-description__images img {
+  max-height: 134px;
+  object-fit: cover;
+}
+@media (max-width: 640px) {
+  .section__product-tabs .table__container .table__options .options-description__images {
+    flex-direction: column;
+  }
+  .section__product-tabs .table__container .table__options .options-description__images img {
+    max-height: unset;
+    width: 100%;
+  }
+}
 .section__product-tabs .table__container .table__price-title {
   font-family: "Lato", sans-serif;
   font-style: normal;
@@ -753,7 +856,6 @@
   font-size: 24px;
   line-height: 24px;
   color: #0C884C;
-  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */
