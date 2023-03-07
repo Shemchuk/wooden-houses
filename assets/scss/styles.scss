@@ -102,11 +102,6 @@
 .description-column {
   padding: 20px 0 20px 32px;
 
-  @media (max-width: $mobile) {
-    width: 100%;
-    padding-left: 0;
-  }
-
   .block-title {
     display: flex;
     justify-content: space-between;
@@ -820,6 +815,116 @@
         font-size: 24px;
         line-height: 24px;  
         color: $color_gr;
+      }
+    }
+  }
+}
+
+.section__send-request {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  background-color: $color_gr;
+
+  @media (max-width: $mobile) {
+    padding: 0 16px;
+  }
+
+  .section__wrapper {
+    display: flex;
+    width: 100%;;
+    max-width: $desktop-content;
+    margin: 64px auto;
+    color: #FCFCFC;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  .request-description-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+
+    @media (max-width: 1024px) {
+      flex: 1 1 auto;
+      justify-content: center;
+      margin-bottom: 32px;;
+
+      span.request-title,  span.request-text { 
+        text-align: center;
+      }
+    }
+
+    span.request-title {
+      @include fontLatoLight;
+      font-size: 35px;
+      line-height: 46px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+
+      @media (max-width: $mobile) {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    span.request-text {
+      display: flex;
+      flex-direction: column; 
+
+      @include fontLatoBold;
+      font-size: 24px;
+      line-height: 41px;
+      // white-space: nowrap;
+      text-transform: uppercase;
+
+      @media (max-width: $mobile) {
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .contacts-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 50%;
+
+    &__button {
+      @include fontLatoRegular;
+      font-size: 18px;
+      line-height: 22px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      text-decoration: unset;
+      color: white;
+
+      padding: 17px 77px;
+      margin-bottom: 24px;
+      border: 1px solid white;
+
+      @media (max-width: $mobile) {
+        padding: 17px 48px;
+      }
+    }
+
+    &__phone {
+      @include fontLatoBold;
+      font-size: 32px;
+      line-height: 41px;
+      white-space: nowrap;
+      text-decoration: unset;
+
+      color: #FCFCFC;
+
+      @media (max-width: $mobile) {
+        font-size: 24px;
+        line-height: 32px;
       }
     }
   }
