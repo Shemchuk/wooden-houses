@@ -72,8 +72,6 @@
 
       .left-block {
         display: flex;
-        flex-direction: column;
-
         width: calc(100% - 300px);
 
         @media (max-width: $mobile) {
@@ -91,8 +89,6 @@
         }
       }
     }
-  }
-}
 
     // house description at the up right corner 
     .description-column {
@@ -124,67 +120,83 @@
       .block-content {
         margin: 24px 0 0 0;
 
-        // блок "Комплектации"
+        // блок "1. Технология строительства"
+        .tech-build {
+          margin-bottom: 24px;
+
+          .row-images {
+            display: flex;
+            padding: 2px 0;
+
+            .image-item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px 32px;
+              cursor: pointer;
+
+              &.active {
+                background: #EFF8E6;
+                border: 0.847826px solid #78A741;
+              }
+              
+              img {
+                height: 38px;
+              }
+
+              @media (max-width: $mobile) {
+                width: 50%;
+              }
+            }
+          }
+
+          .row-text {
+            display: flex;
+            justify-content: space-evenly;
+
+            .text-item {
+              display: flex;
+              justify-content: center;
+              width: 50%;
+
+              @include fontRobotoNormal;
+              font-size: 14px;
+              line-height: 21px;
+
+              color: $color_sa;
+            }
+          }
+        }
+
+        // блок "2. Комплектация"
         .complectation {
           display: flex;
-          flex-direction: column;
           margin-bottom: 24px;
 
           .complect-item {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
 
-            border: 1px solid $color_sa;
+            width: 50%;
+            height: 40px;
+            border: 1px solid $color_gr;
+
+            @include fontRobotoNormal;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color_gr;
             cursor: pointer;
-            
+
             &.active {
-              border: 1px solid $color_gr;
-            }
-
-            &.active .complect-item__description {
-              display: flex;
-              width: 100%;
-            }
-
-            &.active .complect-item__title {
-              color: $color_gr;
-            }
-
-            &__title {
-              @include fontLatoRegular;
-              font-size: 14px;
-              line-height: 21px;
-              color: $color_sa;
-              padding: 12px 18px;
-            }
-
-            &__description {
-              display: none;
-              flex-direction: column;
               background: $color_gr;
-              padding: 18px;
-
-              span, a {
-                @include fontLatoRegular;
-                font-size: 12px;
-                line-height: 21px;
-                color: white;
-              }
-
-              a {
-                text-decoration-line: underline;
-                cursor: pointer;
-                margin-top: 8px;
-              }
+              border: 1px solid $color_gr;
+              color: #FFFFFF;
             }
-
-
           }
         }
 
-        // блок "Дополнительные опции"
+        // блок "3. Дополнительные опции"
         .additional-options {
           .option-item {
             display: flex;
@@ -200,8 +212,6 @@
               display: block;
               position: relative;
               padding-left: 35px;
-              margin-right: 12px;
-
               // margin-bottom: 12px;
               cursor: pointer;
 
@@ -303,7 +313,6 @@
               @include fontLatoRegular;
               font-size: 12px;
               line-height: 14px;
-              white-space: nowrap;
 
               color: $color_d;
 
@@ -313,111 +322,18 @@
             }
           }
         }
-
-        // last column with the price and discount values
-        &.block-content__price {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: flex-end;
-          
-          margin-top: 12px;
-          // @media (max-width: $tablet) {
-          //   align-items: end;
-          // }
-
-          .price-wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-            width: 100%;
-
-
-            .payment-delivery {
-              @include fontLatoRegular;
-              font-size: 12px;
-              line-height: 14px;
-              color: $color_gr;
-              white-space: nowrap;
-              text-decoration-line: underline;
-            }
-
-            .order-button {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 40px;
-              width: 100%;
-              margin: 16px 0 4px;
-
-              color: white;
-              background: $color_gr;
-
-              border: 1px solid $color_gr;
-
-              @include fontRobotoNormal;
-              font-size: 12px;
-              line-height: 14px;
-              text-decoration-line: none;
-            }
-
-            .discount-text {
-              margin-top: 4px;
-
-              @include fontRobotoNormal;
-              font-size: 14px;
-              line-height: 16px;
-              text-align: right;
-              text-decoration-line: line-through;
-              color: $color_sa;
-              margin-bottom: unset;
-            }
-
-            .discount-value {
-              margin-top: 4px;
-
-              @include fontRobotoBold;
-              font-size: 14px;
-              line-height: 16px;
-              color: $color_gr;
-            }
-
-            .price-value {
-              margin-top: 8px;
-
-              @include fontLatoBold;
-              font-size: 36px;
-              line-height: 36px;
-              text-transform: uppercase;
-              color: $color_gr;
-              white-space: nowrap;
-            }
-
-            
-            .price-credit {
-              margin-top: 8px;
-              @include fontRobotoNormal;
-              font-size: 14px;
-              line-height: 16px;
-              color: $color_gr;
-              white-space: nowrap;
-              text-decoration-line: underline;
-            }
-          }
-        }
       }
     }
 
-    .column-bottom-5 {
+    .column_6 {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       width: 100%;
-      margin-top: 50px;
-      // padding-bottom: 50px;
+      margin-top: 60px;
+      padding-bottom: 50px;
       
-      .column-bottom-5 .item {
+      .column_6 .item {
         width: 14%;
       }
       
@@ -446,24 +362,72 @@
             line-height: 22px;
           }
         }
+
+        // last column with the price and discount values
+        &.item-price {
+          display: flex;
+          align-items: center;
+          
+          @media (max-width: $tablet) {
+            align-items: end;
+          }
+
+          .text {
+            position: relative;
+            @include fontLatoBold;
+            font-size: 36px;
+            line-height: 36px;
+            text-transform: uppercase;
+            color: $color_gr;
+            white-space: nowrap;
+
+            &-discount {
+              position: absolute;
+              right: 0;
+              top: -30px;
+
+              @include fontRobotoNormal;
+              font-size: 14px;
+              line-height: 16px;
+              text-align: right;
+              text-decoration-line: line-through;
+              color: $color_sa;
+              margin-bottom: unset;
+
+              @media (max-width: $mobile) {
+                font-size: 10px;
+                line-height: 12px;
+              }
+
+            }
+
+            @media (max-width: $mobile) {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+        }
       }
   
     }
     
 
     @media screen and (max-width: 1200px) {
-      .column-bottom-5 .item {
+      .column_6 .item {
         width: 30%;
         margin-bottom: 40px;
       }
     }
 
     @media screen and (max-width: 576px) {
-      .column-bottom-5 .item {
+      .column_6 .item {
         width: 49%;
       }
     }
 
+
+  }
+}
 
 .section__product-tabs {
   // max-width: $desktop-content;

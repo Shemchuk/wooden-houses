@@ -26,7 +26,7 @@
 
   <section class="section__description">
     <div class="section__wrapper">
-
+      
       <div class="section__container">
   
         <!-- container for slider -->
@@ -126,53 +126,6 @@
             <!-- </div> -->
           </div>
           
-          <!-- bottom product description in the current section -->
-          <div class="column-bottom-5">
-            <div class="item">
-              <div class="title">
-                Габариты
-              </div>
-              <div class="text">
-                8 х 7,0 </div>
-            </div>
-      
-            <div class="item">
-              <div class="title">
-                Общая площадь
-              </div>
-              <div class="text">
-                142.3м²
-              </div>
-            </div>
-      
-            <div class="item">
-              <div class="title">
-                Жилая площадь
-              </div>
-              <div class="text">
-                92.3м²
-              </div>
-            </div>
-      
-            <div class="item">
-              <div class="title">
-                Тепл. характер.
-              </div>
-              <div class="text">
-              1 этаж 
-              </div>
-            </div>
-      
-            <div class="item">
-              <div class="title">
-                Этажность
-              </div>
-              <div class="text">
-                1 этаж </div>
-            </div>
-      
-
-          </div>
         </div>
     
         <!-- right block with additional options -->
@@ -180,31 +133,41 @@
           <div class="description-column">
   
             <div class="block-title">
-              <span class="block-title__text">Комплектации</span> 
-              <span class="block-title__button">Сравнить</span> 
+              <span class="block-title__text">1. Технология строительства</span> 
             </div>
   
             <div class="block-content">
-              <div class="complectation">
-                <div class="complect-item active">
-                  <div class="complect-item__title">Каркас</div>
-                  <div class="complect-item__description">
-                    <span>Дом подойдет вам, если вы рассматриваете только летнее проживание</span>
-                    <a href="#">Посмотреть комплектацию</a>
+              <div class="tech-build">
+                <div class="row-images">
+                  <div class="image-item active">
+                    <img src="./assets/img/build-technology-carcass.png" alt="image">
+                  </div>
+                  <div class="image-item">
+                    <img src="./assets/img/build-technology-block.png" alt="image">
                   </div>
                 </div>
-                <div class="complect-item">
-                  <div class="complect-item__title">Теплый контур</div>
-                  <div class="complect-item__description">
-                    <span>Дом подойдет вам, если вы рассматриваете только летнее проживание</span>
-                    <a href="#">Посмотреть комплектацию</a>
-                  </div>
+  
+                <div class="row-text">
+                  <div class="text-item">Каркас</div>
+                  <div class="text-item">Блок</div>
                 </div>
               </div>
             </div>
   
             <div class="block-title">
-              <span class="block-title__text">Дополнительные опции</span> 
+              <span class="block-title__text">2. Комплектация</span> 
+              <span class="block-title__button">Сравнить</span> 
+            </div>
+  
+            <div class="block-content">
+              <div class="complectation">
+                <div class="complect-item">Под отделку</div>
+                <div class="complect-item active">Под ключ</div>
+              </div>
+            </div>
+  
+            <div class="block-title">
+              <span class="block-title__text">3. Дополнительные опции</span> 
             </div>
   
             <div class="block-content">
@@ -258,7 +221,7 @@
                 </div>
   
                 <div class="option-item">
-                  <label class="checkbox-container">Подготовка под укладку ламината и стяжки
+                  <label class="checkbox-container">Терраса
                     <input type="checkbox">
                     <span class="checkmark"></span>
                   </label>
@@ -267,29 +230,69 @@
                   <div class="option-item__price">
                     + от 12 050 р/м<sup>2</sup>
                   </div>
-                </div>              
+                </div>
   
-              </div>
-            </div>
-
-            <div class="block-content block-content__price">
-              <div class="price-wrapper">
-                <a href="#" class="payment-delivery">
-                  Оплата и доставка
-                </a>
-                <a href="#" class="order-button">
-                  ЗАКАЗАТЬ
-                </a>
-                <span class="discount-text">
-                  с 29 марта 230 000 руб
-                </span>
-                <span class="discount-value">
-                  Ваша выгода 39 544 руб
-                </span>
-                <span class="price-value">
-                  190 456 руб
-                </span>
-                <a href="#" class="price-credit">В кредит от 25 000Р в месяц</a>
+                <div class="option-item">
+                  <label class="checkbox-container">Панорамные окна
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+  
+                  <div class="option-item__button hidden">Вкл</div>
+                  <div class="option-item__price">
+                    + от 12 050 р/м<sup>2</sup>
+                  </div>
+                </div>
+  
+                <div class="option-item">
+                  <label class="checkbox-container">Перепланировка
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+  
+                  <div class="option-item__button">Вкл</div>
+                  <div class="option-item__price hidden">
+                    + от 12 050 р/м2
+                  </div>
+                </div>
+  
+                <div class="option-item">
+                  <label class="checkbox-container">Терраса
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+  
+                  <div class="option-item__button hidden">Вкл</div>
+                  <div class="option-item__price">
+                    + от 12 050 р/м<sup>2</sup>
+                  </div>
+                </div>
+  
+                <div class="option-item">
+                  <label class="checkbox-container">Панорамные окна
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+  
+                  <div class="option-item__button hidden">Вкл</div>
+                  <div class="option-item__price">
+                    + от 12 050 р/м<sup>2</sup>
+                  </div>
+                </div>
+  
+                <div class="option-item">
+                  <label class="checkbox-container">Терраса
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+  
+                  <div class="option-item__button hidden">Вкл</div>
+                  <div class="option-item__price">
+                    + от 12 050 р/м<sup>2</sup>
+                  </div>
+                </div>
+                
+  
               </div>
             </div>
   
@@ -298,6 +301,61 @@
   
       </div>
   
+      <!-- bottom product description in the current section -->
+      <div class="column_6">
+        <div class="item">
+          <div class="title">
+            Габариты
+          </div>
+          <div class="text">
+            8 х 7,0 </div>
+        </div>
+  
+        <div class="item">
+          <div class="title">
+            Общая площадь
+          </div>
+          <div class="text">
+            142.3м²
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="title">
+            Жилая площадь
+          </div>
+          <div class="text">
+            92.3м²
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="title">
+            Тепл. характер.
+          </div>
+          <div class="text">
+           1 этаж 
+          </div>
+        </div>
+  
+        <div class="item">
+          <div class="title">
+            Этажность
+          </div>
+          <div class="text">
+            1 этаж </div>
+        </div>
+  
+        <div class="item item-price">
+          <div class="text">
+            <div class="text-discount">
+              с 29 марта 230 000 руб
+            </div>
+            190 456 руб
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </div>
