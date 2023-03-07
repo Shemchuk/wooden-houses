@@ -138,6 +138,11 @@ div.content-wrapper {
 .description-column {
   padding: 20px 0 20px 32px;
 
+  @media (max-width: $mobile) {
+    padding: 20px 0 20px 0;
+    width: 100%;
+  }
+
   .block-title {
     display: flex;
     justify-content: space-between;
