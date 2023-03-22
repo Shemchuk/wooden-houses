@@ -85,47 +85,11 @@ $(document).ready(function () {
 
   // click on product tabs - Каркас/Теплый пол
   var complectationItem = $('.complectation__item');
+  
   complectationItem.click(function (e) {
     complectationItem.removeClass('active');
     $(this).addClass('active');
-});
+  });
 
-
-  // $('.complect-item').click(function() {
-  //   $('.complect-item.active').not(this).removeClass('active').children('.complect-item__description').slideUp();
-  //   $(this).toggleClass('active').children('.complect-item__description').slideDown();
-  // });
-
-
-  // $('.complect-item').click(function() {
-  //   var description = $(this).children('.complect-item__description');
-  //   if ($(this).hasClass('active')) {
-  //     description.slideUp();
-  //     $(this).removeClass('active');
-  //   } else {
-  //     $('.complect-item.active').removeClass('active').children('.complect-item__description').slideUp();
-  //     description.slideDown();
-  //     $(this).addClass('active');
-  //   }
-  // });
-
-  // $('.complect-item').click(function() {
-  //   var description = $(this).children('.complect-item__description');
-  //   if ($(this).hasClass('active')) {
-  //     description.slideToggle();
-  //     $(this).removeClass('active');
-  //   } else {
-  //     $('.complect-item.active').removeClass('active').children('.complect-item__description').slideToggle();
-  //     description.slideToggle();
-  //     $(this).addClass('active');
-  //   }
-  // });
-
-  // $('.complect-item').click(function() {
-  //   // remove active class from other complect-item elements
-  //   $('.complect-item').not(this).removeClass('active');
-  //   // toggle active class on the clicked element
-  //   $(this).toggleClass('active');
-  // });
 });
 
