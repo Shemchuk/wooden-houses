@@ -363,10 +363,10 @@
   <section class="section__product-tabs">
     <div class="section__wrapper">
       <div class="product-tabs__container">
-        <a href="#" class="product-tab__item">Планировка</a>
-        <a href="#" class="product-tab__item active">Комплектация</a>
-        <a href="#" class="product-tab__item">Варианты планировок</a>
-        <a href="#" class="product-tab__item">Реализации</a>
+        <a href="" class="product-tab__item product-tab__item-click active" data-to-id="layout">Планировка</a>
+        <a href="" class="product-tab__item product-tab__item-click" data-to-id="complectation">Комплектация</a>
+        <a href="" class="product-tab__item product-tab__item-click" data-to-id="layout_option">Варианты планировок</a>
+        <a href="" class="product-tab__item product-tab__item-click" data-to-id="realization">Реализации</a>
       </div>
 
       <div class="complectation-container show">
@@ -374,8 +374,13 @@
         <div class="complectation__item">Теплый контур</div>
       </div>
 
-      <!-- first table -->
-      <div class="table__container">
+      <!-- first tab container -->
+      <div id="layout" class="table__container product-tab__list">
+        Планировка
+      </div>
+
+      <!-- secont tab container with complectation table -->
+      <div id="complectation" class="table__container product-tab__list product-tab__list-hide">
         <!-- <div class="table__header">Комплектация под усадку</div> -->
         <div class="table__description">Дом подойдет вам, если вы рассматриваете только летнее проживание
         </div>
@@ -491,6 +496,15 @@
         </div>
       </div>
   
+      <!-- third tab container -->
+      <div id="layout_option" class="table__container product-tab__list product-tab__list-hide">
+        Варианты планировок
+      </div>
+
+      <!-- fourth tab container -->
+      <div id="realization" class="table__container product-tab__list product-tab__list-hide">
+        Реализации
+      </div>
     </div>
   </section>
 

@@ -269,6 +269,9 @@ div.content-wrapper {
   border: 1px solid #7C7C7C;
   cursor: pointer;
 }
+.description-column .block-content .complectation .complect-item:first-child {
+  border-bottom: unset;
+}
 .description-column .block-content .complectation .complect-item.active {
   border: 1px solid #0C884C;
 }
@@ -649,6 +652,7 @@ div.content-wrapper {
   box-sizing: content-box;
   max-width: 1189px;
   margin: 0 32px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .section__product-tabs .section__wrapper {
@@ -692,10 +696,12 @@ div.content-wrapper {
   letter-spacing: -0.2px;
   color: #10252E;
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 .section__product-tabs .product-tabs__container .product-tab__item.active {
   color: white;
   background: #0C884C;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1200px) {
   .section__product-tabs .product-tabs__container .product-tab__item {
@@ -725,10 +731,15 @@ div.content-wrapper {
   font-size: 20px;
   line-height: 24px;
   color: #10252E;
+  transition: all 0.3s ease-in-out;
 }
 .section__product-tabs .complectation-container .complectation__item.active {
   color: #0C884C;
   background-color: rgba(12, 136, 76, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.section__product-tabs .product-tab__list-hide {
+  display: none;
 }
 .section__product-tabs .table__container {
   margin-bottom: 60px;
