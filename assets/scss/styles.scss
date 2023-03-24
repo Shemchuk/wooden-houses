@@ -164,6 +164,14 @@ div.content-wrapper {
   .block-content {
     margin: 24px 0 0 0;
 
+    &__options { 
+      display: none;
+    }
+
+    &__options.active { 
+      display: block;
+    }
+
     // блок "Комплектации"
     .complectation {
       display: flex;
@@ -209,6 +217,7 @@ div.content-wrapper {
           flex-direction: column;
           background: $color_gr;
           padding: 18px;
+          cursor: default;
 
           span, a {
             @include fontLatoRegular;
@@ -225,8 +234,6 @@ div.content-wrapper {
         }
       }
     }
-
-
 
     // last column with the price and discount values
     &.block-content__price {
@@ -719,6 +726,14 @@ div.content-wrapper {
   .table__container {
     margin-bottom: 60px;
 
+    .table__wrapper {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+    
     .table__header {
       @include fontLatoLight;
       font-size: 24px;

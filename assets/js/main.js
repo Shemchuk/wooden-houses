@@ -66,10 +66,29 @@ $(document).ready(function () {
     },
   });
 
+  // function for add/remove .action class in the options blocks
+  function setComplectSectionActive( complectType ) {
+    // remove .active class from the options blocks
+    $('.complect-click-js.active').removeClass('active');
+
+    // set .active class to the options blocks
+    complectType && $('.' + complectType).addClass('active');
+  }
+
+
   // show/hide complectation description
   $('.complect-item').click(function() {
     $('.complect-item.active').not(this).removeClass('active');
-    $(this).toggleClass('active');
+    $(this).addClass('active');
+    
+    // set .active class to the bottom buttons Каркас/теплый контур
+    let to_id = $(this).attr('data-to-id');
+    $('.complectation__item.active').removeClass('active');
+    $('#' + to_id).addClass('active');
+
+    // add/remove .action class in the options blocks
+    setComplectSectionActive( $(this).attr('data-complect-type') );
+
   });
 
 
@@ -81,7 +100,16 @@ $(document).ready(function () {
     $(this).addClass('active');
     $('.product-tab__list').hide();
     $('#' + to_id).fadeIn();
+
+    //show/hide buttons каркас/теплый контур
+    const complectationContainer = $(".complectation-container");
+    if ( to_id === "complectation" ) {
+      complectationContainer.addClass("show")
+    } else {
+      complectationContainer.removeClass("show")
+    }
 });
+
 
   // click on product tabs - Каркас/Теплый пол
   var complectationItem = $('.complectation__item');
@@ -89,6 +117,14 @@ $(document).ready(function () {
   complectationItem.click(function (e) {
     complectationItem.removeClass('active');
     $(this).addClass('active');
+
+    // set .active class to the top buttons Каркас/теплый контур
+    let to_id = $(this).attr('data-to-id');
+    $('.complect-item.active').removeClass('active');
+    $('#' + to_id).addClass('active');
+
+    setComplectSectionActive( $(this).attr('data-complect-type') );
+
   });
 
 });

@@ -256,6 +256,12 @@ div.content-wrapper {
 .description-column .block-content {
   margin: 24px 0 0 0;
 }
+.description-column .block-content__options {
+  display: none;
+}
+.description-column .block-content__options.active {
+  display: block;
+}
 .description-column .block-content .complectation {
   display: flex;
   flex-direction: column;
@@ -298,6 +304,7 @@ div.content-wrapper {
   flex-direction: column;
   background: #0C884C;
   padding: 18px;
+  cursor: default;
 }
 .description-column .block-content .complectation .complect-item__description span, .description-column .block-content .complectation .complect-item__description a {
   font-family: "Lato", sans-serif;
@@ -743,6 +750,12 @@ div.content-wrapper {
 }
 .section__product-tabs .table__container {
   margin-bottom: 60px;
+}
+.section__product-tabs .table__container .table__wrapper {
+  display: none;
+}
+.section__product-tabs .table__container .table__wrapper.active {
+  display: block;
 }
 .section__product-tabs .table__container .table__header {
   font-family: "Lato", sans-serif;
