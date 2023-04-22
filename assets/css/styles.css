@@ -448,12 +448,6 @@ div.content-wrapper {
   -ms-user-select: none;
   user-select: none;
   /* Hide the browser's default checkbox */
-  /* Create a custom checkbox */
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* On mouse-over, add a grey background color */
-  /* When the checkbox is checked, add a blue background */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */
 }
 .additional-options .option-item .checkbox-container input {
   position: absolute;
@@ -461,28 +455,6 @@ div.content-wrapper {
   cursor: pointer;
   height: 0;
   width: 0;
-}
-.additional-options .option-item .checkbox-container .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/checkbox-unchecked.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.additional-options .option-item .checkbox-container .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-.additional-options .option-item .checkbox-container input:checked ~ .checkmark {
-  background-image: url("../img/checkbox-checked.png");
-}
-.additional-options .option-item .checkbox-container input:checked ~ .checkmark:after {
-  display: block;
 }
 .additional-options .option-item__button {
   font-family: "Lato", sans-serif;
@@ -513,6 +485,27 @@ div.content-wrapper {
   display: none;
 }
 
+/* Create a custom checkbox */
+.checkmark {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/checkbox-unchecked.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* When the checkbox is checked, add the background */
+.option-item.checked .checkmark {
+  background-image: url("../img/checkbox-checked.png");
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+/* Show the checkmark when checked */
 .column-bottom-5 {
   display: flex;
   flex-wrap: wrap;

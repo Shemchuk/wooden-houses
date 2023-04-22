@@ -127,5 +127,76 @@ $(document).ready(function () {
 
   });
 
+  // when click on upper block checkboxes
+  $('.block-content input[type="checkbox"]').on('click', function() {
+    var isChecked = $(this).attr('checked');
+    var index = $('.block-content.active input[type="checkbox"]').index(this);
+    var parent = $(this).closest('.option-item');
+    var checkbox2 = $('.table__wrapper.active input[type="checkbox"]').eq(index);//.eq(index).prop('checked', true);
+    parentCheckbox2 = checkbox2.closest('.option-item');
+
+    if ( isChecked ) {
+      $(this).removeAttr('checked');
+      checkbox2.removeAttr('checked');
+      parent.removeClass('checked');
+      parentCheckbox2.removeClass('checked');
+    } else {
+      $(this).attr('checked', true);
+      checkbox2.attr('checked', true);
+      parent.addClass('checked');
+      parentCheckbox2.addClass('checked');
+    }
+    
+    console.log( checkbox2.attr("checked"), !isChecked, index, checkbox2.outerHeight() );
+  });
+
+
+  // when click on botoom block checkboxes
+  $('.table__wrapper input[type="checkbox"]').on('click', function() {
+    var isChecked = $(this).attr('checked');
+    var index = $('.table__wrapper.active input[type="checkbox"]').index(this);
+    var parent = $(this).closest('.option-item');
+    var checkbox2 = $('.block-content.active input[type="checkbox"]').eq(index);//.eq(index).prop('checked', true);
+    parentCheckbox2 = checkbox2.closest('.option-item');
+
+    if ( isChecked ) {
+      $(this).removeAttr('checked');
+      checkbox2.removeAttr('checked');
+      parent.removeClass('checked');
+      parentCheckbox2.removeClass('checked');
+    } else {
+      $(this).attr('checked', true);
+      checkbox2.attr('checked', true);
+      parent.addClass('checked');
+      parentCheckbox2.addClass('checked');
+    }
+    
+    console.log( checkbox2.attr("checked"), !isChecked, index, checkbox2.outerHeight() );
+  });
+
+
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('click', () => {
+      const priceValue = document.querySelector('.price-value');
+      const tablePriceValue = document.querySelectorAll('.table__price-text');
+      const optionPrice = parseInt(checkbox.getAttribute('data-option-price'));
+      const currentPrice = parseInt(priceValue.getAttribute('data-price'));
+      let newPrice = 0;
+
+      if (checkbox.checked) {
+        newPrice = currentPrice + optionPrice
+      } else {
+        newPrice = currentPrice - optionPrice;
+      }
+
+      priceValue.setAttribute('data-price', newPrice);
+      priceValue.innerHTML = newPrice.toLocaleString('ru-RU') + ' руб';
+      tablePriceValue.forEach(function(item) {
+        item.innerHTML = "Цена: от " + newPrice.toLocaleString('ru-RU') + ' руб';
+0      });
+    });
+  });
 });
 
