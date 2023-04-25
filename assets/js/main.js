@@ -78,6 +78,7 @@ $(document).ready(function () {
 
   // show/hide complectation description
   $('.complect-item').click(function() {
+    
     $('.complect-item.active').not(this).removeClass('active');
     $(this).addClass('active');
     
@@ -89,6 +90,7 @@ $(document).ready(function () {
     // add/remove .action class in the options blocks
     setComplectSectionActive( $(this).attr('data-complect-type') );
 
+    recalculatePrice();
   });
 
 
@@ -108,13 +110,14 @@ $(document).ready(function () {
     } else {
       complectationContainer.removeClass("show")
     }
-});
+  });
 
 
   // click on product tabs - Каркас/Теплый пол
   var complectationItem = $('.complectation__item');
   
   complectationItem.click(function (e) {
+    
     complectationItem.removeClass('active');
     $(this).addClass('active');
 
@@ -122,9 +125,10 @@ $(document).ready(function () {
     let to_id = $(this).attr('data-to-id');
     $('.complect-item.active').removeClass('active');
     $('#' + to_id).addClass('active');
-
+    
     setComplectSectionActive( $(this).attr('data-complect-type') );
-
+    
+    recalculatePrice();
   });
 
   // when click on upper block checkboxes
@@ -171,10 +175,38 @@ $(document).ready(function () {
       parentCheckbox2.addClass('checked');
     }
     
-    console.log( checkbox2.attr("checked"), !isChecked, index, checkbox2.outerHeight() );
+    // console.log( checkbox2.attr("checked"), !isChecked, index, checkbox2.outerHeight() );
   });
 
+  
+  // recalculate price on demand
+  const recalculatePrice = () => {
+    const checkboxes = document.querySelectorAll('.block-content__options.active input[type="checkbox"]');
+    const priceValue = document.querySelector('.price-value');
+    const tablePriceValue = document.querySelectorAll('.table__price-text');
 
+    const initPrice = priceValue.getAttribute('data-init-price');
+    priceValue.setAttribute('data-price-with-options', initPrice);
+    
+    checkboxes.forEach(checkbox => {
+      const optionPrice = parseInt(checkbox.getAttribute('data-option-price'));
+      const currentPrice = parseInt(priceValue.getAttribute('data-price-with-options'));
+      let newPrice = currentPrice;
+  
+      if (checkbox.checked) {
+        newPrice = newPrice + optionPrice
+      } 
+  
+      priceValue.setAttribute('data-price-with-options', newPrice);
+      priceValue.innerHTML = newPrice.toLocaleString('ru-RU') + ' руб';
+      tablePriceValue.forEach(function(item) {
+        item.innerHTML = "Цена: от " + newPrice.toLocaleString('ru-RU') + ' руб';
+      });
+    });
+  }
+
+
+  // add event listeners for checkboxes for recalculate price on every click
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
   checkboxes.forEach(checkbox => {
@@ -182,7 +214,7 @@ $(document).ready(function () {
       const priceValue = document.querySelector('.price-value');
       const tablePriceValue = document.querySelectorAll('.table__price-text');
       const optionPrice = parseInt(checkbox.getAttribute('data-option-price'));
-      const currentPrice = parseInt(priceValue.getAttribute('data-price'));
+      const currentPrice = parseInt(priceValue.getAttribute('data-price-with-options'));
       let newPrice = 0;
 
       if (checkbox.checked) {
@@ -191,11 +223,11 @@ $(document).ready(function () {
         newPrice = currentPrice - optionPrice;
       }
 
-      priceValue.setAttribute('data-price', newPrice);
+      priceValue.setAttribute('data-price-with-options', newPrice);
       priceValue.innerHTML = newPrice.toLocaleString('ru-RU') + ' руб';
       tablePriceValue.forEach(function(item) {
         item.innerHTML = "Цена: от " + newPrice.toLocaleString('ru-RU') + ' руб';
-0      });
+      });
     });
   });
 });
