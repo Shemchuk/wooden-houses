@@ -844,6 +844,27 @@ div.content-wrapper {
         flex: 1 1 40%;
       }
 
+      .additional-options {
+        max-width: 500px;
+
+        .option-item {
+          position: relative;
+          padding-right: 35px;
+
+          .button-question {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url("../img/icon-question.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+          }
+        }
+      }
+
       .options-description {
         display: flex;
         flex-direction: column;
@@ -851,6 +872,12 @@ div.content-wrapper {
         background-color: $color_gr;
         color: white;
         padding: 20px 24px 30px;
+        max-height: 200px;
+        overflow-y: auto;
+        
+        &.hidden {
+          display: none;
+        }
 
         &__text {
           @include fontLatoRegular;

@@ -843,6 +843,24 @@ div.content-wrapper {
   display: flex;
   flex: 1 1 40%;
 }
+.section__product-tabs .table__container .table__options .additional-options {
+  max-width: 500px;
+}
+.section__product-tabs .table__container .table__options .additional-options .option-item {
+  position: relative;
+  padding-right: 35px;
+}
+.section__product-tabs .table__container .table__options .additional-options .option-item .button-question {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icon-question.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
 .section__product-tabs .table__container .table__options .options-description {
   display: flex;
   flex-direction: column;
@@ -850,6 +868,11 @@ div.content-wrapper {
   background-color: #0C884C;
   color: white;
   padding: 20px 24px 30px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.section__product-tabs .table__container .table__options .options-description.hidden {
+  display: none;
 }
 .section__product-tabs .table__container .table__options .options-description__text {
   font-family: "Lato", sans-serif;

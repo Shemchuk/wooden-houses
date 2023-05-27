@@ -230,5 +230,16 @@ $(document).ready(function () {
       });
     });
   });
+
+  $('.table__options .option-item .button-question').click(function() {
+    // Get the data-id of the clicked button
+    var id = $(this).data('id');
+
+    // First, hide all the options-description blocks
+    $('.table__options .options-description').addClass('hidden');
+
+    // Then, show the one with the matching data-id
+    $('.table__options .options-description[data-id=' + id + ']').removeClass('hidden');
+  });
 });
 
