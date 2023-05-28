@@ -1,0 +1,596 @@
+@import 'typography';
+@import 'variables';
+@import 'slider';
+
+.page__title {
+  padding: 30px 32px 52px 32px;
+  display: flex;
+  width: 100%;
+  max-width: $desktop-content;
+  margin: 0 auto;
+
+  @include fontLatoLight;
+  text-transform: uppercase;
+  color: $color_d;
+
+  @media (max-width: $mobile) {
+    font-size: 30px;
+    line-height: 32px;
+    padding: 30px 16px 52px 16px;
+    // word-break:
+  }
+}
+
+
+.section {
+  &__description {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #F7F7F7;
+    // padding: 0 32px;
+    // padding: 0 32px;
+
+    @media (max-width: $mobile) {
+      // padding: 0 16px;
+    }
+
+    .section__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      // box-sizing: content-box;
+      max-width: $desktop-content;
+      margin: 0 32px;
+      // padding: 0 32px;
+
+      width: 100%;
+
+      @media (max-width: calc($desktop-content + 64px)) {
+        padding: 0 32px;
+        margin: 0;
+      }
+
+      @media (max-width: $mobile) {
+        margin: 0 16px;
+      }
+    }
+
+    .section__container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      // max-width: $desktop-content;
+      // margin: 0 auto;
+
+      
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+
+      .left-block {
+        display: flex;
+        width: calc(100% - 300px);
+
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+
+      .right-block {
+        display: flex;
+        width: 300px;
+        min-width: 300px;
+
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+    }
+
+    // house description at the up right corner 
+    .description-column {
+      padding: 20px 0 20px 32px;
+
+      @media (max-width: $mobile) {
+        width: 100%;
+        padding-left: 0;
+      }
+
+      .block-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text {
+          @include fontRobotoNormal;
+          color: $color_d;
+        }
+
+        &__button {
+          @include fontLatoRegular;
+          text-decoration-line: underline;
+          color: $color_gr;
+          cursor: pointer;
+        }
+      }
+
+      .block-content {
+        margin: 24px 0 0 0;
+
+        // блок "1. Технология строительства"
+        .tech-build {
+          margin-bottom: 24px;
+
+          .row-images {
+            display: flex;
+            padding: 2px 0;
+
+            .image-item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px 32px;
+              cursor: pointer;
+
+              &.active {
+                background: #EFF8E6;
+                border: 0.847826px solid #78A741;
+              }
+              
+              img {
+                height: 38px;
+              }
+
+              @media (max-width: $mobile) {
+                width: 50%;
+              }
+            }
+          }
+
+          .row-text {
+            display: flex;
+            justify-content: space-evenly;
+
+            .text-item {
+              display: flex;
+              justify-content: center;
+              width: 50%;
+
+              @include fontRobotoNormal;
+              font-size: 14px;
+              line-height: 21px;
+
+              color: $color_sa;
+            }
+          }
+        }
+
+        // блок "2. Комплектация"
+        .complectation {
+          display: flex;
+          margin-bottom: 24px;
+
+          .complect-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 50%;
+            height: 40px;
+            border: 1px solid $color_gr;
+
+            @include fontRobotoNormal;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color_gr;
+            cursor: pointer;
+
+            &.active {
+              background: $color_gr;
+              border: 1px solid $color_gr;
+              color: #FFFFFF;
+            }
+          }
+        }
+
+        // блок "3. Дополнительные опции"
+        .additional-options {
+          .option-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:not(:last-child) {
+              margin-bottom: 15px;
+            }
+
+            // custom checkbox styles
+            .checkbox-container {
+              display: block;
+              position: relative;
+              padding-left: 35px;
+              // margin-bottom: 12px;
+              cursor: pointer;
+
+              @include fontLatoRegular;
+              font-size: 14px;
+              line-height: 24px;
+              color: $color_gray4;
+              
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+
+              /* Hide the browser's default checkbox */
+              & input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+
+              /* Create a custom checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 24px;
+                width: 24px;
+                // background-color: #eee;
+
+                background-image: url("../img/checkbox-unchecked.png");
+                background-size: cover;
+                background-position:center ;
+                background-repeat: no-repeat;
+              }
+
+              /* Create the checkmark/indicator (hidden when not checked) */
+              .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;               
+              }
+
+              /* On mouse-over, add a grey background color */
+              &:hover input ~ .checkmark {
+                // background-color: #ccc;
+                // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              }
+  
+              /* When the checkbox is checked, add a blue background */
+              input:checked ~ .checkmark {
+                // background-color: #2196F3;
+                background-image: url("../img/checkbox-checked.png");
+  
+              }
+  
+              /* Show the checkmark when checked */
+              input:checked ~ .checkmark:after {
+                display: block;
+              }
+              
+
+              /* Style the checkmark/indicator */
+              .checkmark:after {
+                // background-image: url("../img/checkbox-checked.png");
+                // background-size: cover;
+                // background-position:center ;
+                // background-repeat: no-repeat;
+                // left: 9px;
+                // top: 5px;
+                // width: 5px;
+                // height: 10px;
+                // border: solid white;
+                // border-width: 0 3px 3px 0;
+                // -webkit-transform: rotate(45deg);
+                // -ms-transform: rotate(45deg);
+                // transform: rotate(45deg);
+              }
+
+            }
+
+            // right part of the checkbox - button Вкл
+            &__button {
+              @include fontLatoRegular;
+              font-size: 12px;
+              line-height: 14px;
+
+              color: $color_gr;
+              cursor: pointer;
+
+              &.hidden {
+                display: none;
+              }
+            }
+
+            // right part of the checkbox - the price
+            &__price {
+              @include fontLatoRegular;
+              font-size: 12px;
+              line-height: 14px;
+
+              color: $color_d;
+
+              &.hidden {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .column_6 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 60px;
+      padding-bottom: 50px;
+      
+      .column_6 .item {
+        width: 14%;
+      }
+      
+      .item {
+        .title {
+          @include fontLatoRegular;
+          font-size: 18px;
+          line-height: 24px;
+          color: $color_w;
+          margin-bottom: 12px;
+
+          @media (max-width: $mobile) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+        
+        .text {
+          @include fontLatoBold;
+          font-size: 24px;
+          line-height: 24px;
+          color: $color_w;
+
+          @media (max-width: $mobile) {
+            font-size: 22px;
+            line-height: 22px;
+          }
+        }
+
+        // last column with the price and discount values
+        &.item-price {
+          display: flex;
+          align-items: center;
+          
+          @media (max-width: $tablet) {
+            align-items: end;
+          }
+
+          .text {
+            position: relative;
+            @include fontLatoBold;
+            font-size: 36px;
+            line-height: 36px;
+            text-transform: uppercase;
+            color: $color_gr;
+            white-space: nowrap;
+
+            &-discount {
+              position: absolute;
+              right: 0;
+              top: -30px;
+
+              @include fontRobotoNormal;
+              font-size: 14px;
+              line-height: 16px;
+              text-align: right;
+              text-decoration-line: line-through;
+              color: $color_sa;
+              margin-bottom: unset;
+
+              @media (max-width: $mobile) {
+                font-size: 10px;
+                line-height: 12px;
+              }
+
+            }
+
+            @media (max-width: $mobile) {
+              font-size: 24px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+  
+    }
+    
+
+    @media screen and (max-width: 1200px) {
+      .column_6 .item {
+        width: 30%;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .column_6 .item {
+        width: 49%;
+      }
+    }
+
+
+  }
+}
+
+.section__product-tabs {
+  // max-width: $desktop-content;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  
+  .section__wrapper {
+    box-sizing: content-box;
+    max-width: $desktop-content;
+    margin: 0 32px;
+
+    @media (max-width: $mobile) {
+      margin: 0 16px;
+    }
+  }
+
+  // buttons (tabs)
+  .product-tabs__container {
+    display: flex;
+    flex-direction: row;
+    background: $color_bg;
+
+    margin: 60px 0px 30px;
+    // padding: 0 32px;
+
+    height: 45px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      height: unset;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 60px 0px 30px;
+    }
+
+    .product-tab__item {
+      // width: 19%;
+      // height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 auto; 
+      white-space: nowrap;
+
+      // width: 100%;
+      height: 100%;
+      
+      padding: 0 32px;
+
+      cursor: pointer;
+      @include fontLatoRegular;
+      font-size: 20px;
+      line-height: 24px;
+      
+      letter-spacing: -0.2px;
+      color: $color_w;
+
+      text-decoration: none;
+
+      &.active {
+        color: white;
+        background: $color_gr;
+      }
+
+      @media (max-width: $tablet) {
+        height: 45px;
+      }
+    }
+  }
+
+  .table__container {
+    margin-bottom: 60px;
+
+    .table__header {
+      @include fontLatoLight;
+      font-size: 24px;
+      line-height: 32px;
+      text-transform: uppercase;
+      color: $color_d;
+
+      margin-bottom: 30px;
+    }
+
+    .table__content {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+      border: 1px solid $color_border;
+      border-width: 0 0 1px 0;
+
+      .table__row {
+        display: flex;
+        @media (max-width: $mobile) {
+          flex-direction: column;
+        }
+
+        .table__cell-header {
+          display: flex;
+          align-items: center;
+          flex: 1 0 35%;
+          padding: 32px 32px 32px 70px;
+
+          border: 1px solid $color_border;
+          border-width: 1px 1px 0 1px;
+
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          color: black;
+
+          @media (max-width: $tablet) {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+        }
+
+        .table__cell-content {
+          display: flex;
+          flex: 1 1 65%;
+
+          align-items: center;
+          padding: 20px 32px;
+
+          border: 1px solid $color_border;
+          border-width: 1px 1px 0 0;
+
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 20px;
+
+          color: $color_sa;
+
+          @media (max-width: $tablet) {
+            padding-left: 16px;
+            padding-right: 16px;
+            border-left-width: 1px;
+          }
+        }
+      }
+    }
+
+    .table__price {
+      &-title {
+        @include fontLatoRegular;
+        font-size: 18px;
+        line-height: 24px;  
+        color: $color_gr;
+        margin-bottom: 12px;
+      }
+
+      &-text {
+        @include fontLatoBold;
+        font-size: 24px;
+        line-height: 24px;  
+        color: $color_gr;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
