@@ -241,5 +241,28 @@ $(document).ready(function () {
     // Then, show the one with the matching data-id
     $('.table__options .options-description[data-id=' + id + ']').removeClass('hidden');
   });
+
+  // click on the button "Посмотреть комплектацию"
+  $('a[href="#complectation-container"]').on('click', function(event) {
+    event.preventDefault(); // Prevent the default action
+
+    // 1. Scroll to the #complectation-container
+    $('html, body').animate({
+        scrollTop: $("#complectation-container").offset().top
+    }, 500); // 2000 milliseconds = 2 seconds
+
+    // 2. Remove ".active" class from all ".product-tab__item.product-tab__item-click" elements.
+    $('.product-tab__item.product-tab__item-click').removeClass('active');
+
+    // 3. Add ".active" class to this element
+    $('a[data-to-id="complectation"]').addClass('active');
+
+    // 4. Add ".show" class to the ".complectation-container" element
+    $('.complectation-container').addClass('show');
+
+    // 5. Add class ".product-tab__list-hide" to all ".table__container.product-tab__list" elements except the "#complectation" element
+    $('.table__container.product-tab__list').hide().addClass('product-tab__list-hide');
+    $('#complectation').show().removeClass('product-tab__list-hide');
+});
 });
 

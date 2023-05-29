@@ -846,6 +846,11 @@ div.content-wrapper {
 .section__product-tabs .table__container .table__options .additional-options {
   max-width: 500px;
 }
+@media (max-width: 900px) {
+  .section__product-tabs .table__container .table__options .additional-options {
+    max-width: unset;
+  }
+}
 .section__product-tabs .table__container .table__options .additional-options .option-item {
   position: relative;
   padding-right: 35px;
@@ -871,6 +876,12 @@ div.content-wrapper {
   max-height: 200px;
   overflow-y: auto;
 }
+@media (max-width: 900px) {
+  .section__product-tabs .table__container .table__options .options-description {
+    max-height: unset;
+    overflow-y: unset;
+  }
+}
 .section__product-tabs .table__container .table__options .options-description.hidden {
   display: none;
 }
@@ -886,15 +897,22 @@ div.content-wrapper {
 }
 .section__product-tabs .table__container .table__options .options-description__images {
   display: flex;
-  gap: 26px;
+  justify-content: space-between;
+}
+.section__product-tabs .table__container .table__options .options-description__images:not(:last-child) {
+  margin-bottom: 16px;
 }
 .section__product-tabs .table__container .table__options .options-description__images img {
-  max-height: 134px;
-  object-fit: cover;
+  width: calc(50% - 10px); /* subtract some pixels for margin if you need */
+  height: auto;
+}
+.section__product-tabs .table__container .table__options .options-description__images img:only-child {
+  width: 100%;
 }
 @media (max-width: 640px) {
   .section__product-tabs .table__container .table__options .options-description__images {
     flex-direction: column;
+    gap: 16px;
   }
   .section__product-tabs .table__container .table__options .options-description__images img {
     max-height: unset;

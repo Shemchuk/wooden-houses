@@ -847,6 +847,10 @@ div.content-wrapper {
       .additional-options {
         max-width: 500px;
 
+        @media (max-width: 900px) {
+          max-width: unset;
+        }
+
         .option-item {
           position: relative;
           padding-right: 35px;
@@ -875,6 +879,11 @@ div.content-wrapper {
         max-height: 200px;
         overflow-y: auto;
         
+        @media (max-width: 900px) {
+          max-height: unset;
+          overflow-y: unset;
+        }
+
         &.hidden {
           display: none;
         }
@@ -888,15 +897,29 @@ div.content-wrapper {
 
         &__images {
           display: flex;
-          gap: 26px;
+          // gap: 26px;
+          justify-content: space-between;
+
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
 
           img {
-            max-height: 134px;
-            object-fit: cover;
+            width: calc(50% - 10px); /* subtract some pixels for margin if you need */
+            height: auto;
+            // max-height: 134px;
+            // object-fit: cover;
+          }
+
+          img:only-child {
+            width: 100%;
           }
 
           @media (max-width: 640px) {
             flex-direction: column;
+            gap: 16px;
+            
+
             img {
               max-height: unset;
               width: 100%;
