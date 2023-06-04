@@ -1,6 +1,11 @@
-@import 'typography';
-@import 'variables';
-@import 'slider';
+@import "typography";
+@import "variables";
+@import "slider";
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 div.content-wrapper {
   margin: 0 32px;
@@ -27,6 +32,10 @@ div.content-wrapper {
     padding-top: 57px;
   }
 
+  &.other-projects {
+    padding: 56px 0 29px;
+  }
+
   @media (max-width: $mobile) {
     font-size: 30px;
     line-height: 32px;
@@ -35,7 +44,7 @@ div.content-wrapper {
   }
 
   .arrows-block {
-    // padding: 0 32px; 
+    // padding: 0 32px;
     // margin: 0 32px;
     position: absolute;
     bottom: 10px;
@@ -45,11 +54,11 @@ div.content-wrapper {
     .arrows-block__wrapper {
       display: flex;
       justify-content: space-between;
-  
+
       img {
         width: 152px;
       }
-    
+
       a:first-child {
         img {
           transform: rotate(180deg);
@@ -57,19 +66,16 @@ div.content-wrapper {
       }
     }
   }
-
 }
 
-
-
 .section {
-  &__description {    
+  &__description {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     // padding: 0 32px;
     // padding: 0 32px;
 
@@ -105,7 +111,6 @@ div.content-wrapper {
       // max-width: $desktop-content;
       // margin: 0 auto;
 
-      
       @media (max-width: $mobile) {
         flex-direction: column;
       }
@@ -134,7 +139,7 @@ div.content-wrapper {
   }
 }
 
-// house description at the up right corner 
+// house description at the up right corner
 .description-column {
   padding: 20px 0 20px 32px;
 
@@ -164,11 +169,11 @@ div.content-wrapper {
   .block-content {
     margin: 24px 0 0 0;
 
-    &__options { 
+    &__options {
       display: none;
     }
 
-    &__options.active { 
+    &__options.active {
       display: block;
     }
 
@@ -186,19 +191,19 @@ div.content-wrapper {
 
         border: 1px solid $color_sa;
         cursor: pointer;
-        
+
         &:first-child {
           border-bottom: unset;
         }
 
         &.active {
           border: 1px solid $color_gr;
-    
+
           .complect-item__description {
             display: flex;
             width: 100%;
           }
-    
+
           .complect-item__title {
             color: $color_gr;
           }
@@ -219,7 +224,8 @@ div.content-wrapper {
           padding: 18px;
           cursor: default;
 
-          span, a {
+          span,
+          a {
             @include fontLatoRegular;
             font-size: 12px;
             line-height: 21px;
@@ -241,7 +247,7 @@ div.content-wrapper {
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
-      
+
       margin-top: 12px;
       // @media (max-width: $tablet) {
       //   align-items: end;
@@ -253,7 +259,6 @@ div.content-wrapper {
         justify-content: flex-end;
         align-items: flex-end;
         width: 100%;
-
 
         .payment-delivery {
           @include fontLatoRegular;
@@ -315,7 +320,6 @@ div.content-wrapper {
           white-space: nowrap;
         }
 
-        
         .price-credit {
           margin-top: 8px;
           @include fontRobotoNormal;
@@ -357,7 +361,7 @@ div.content-wrapper {
       font-size: 14px;
       line-height: 24px;
       color: $color_gray4;
-      
+
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
@@ -391,7 +395,7 @@ div.content-wrapper {
       // .checkmark:after {
       //   content: "";
       //   position: absolute;
-      //   display: none;               
+      //   display: none;
       // }
 
       // /* When the checkbox is checked, add a blue background */
@@ -404,7 +408,7 @@ div.content-wrapper {
       // /* Show the checkmark when checked */
       // input:checked ~ .checkmark:after {
       //   display: block;
-      // }     
+      // }
     }
 
     // right part of the checkbox - button Вкл
@@ -437,7 +441,6 @@ div.content-wrapper {
   }
 }
 
-
 // checkboxes
 
 /* Create a custom checkbox */
@@ -451,7 +454,7 @@ div.content-wrapper {
 
   background-image: url("../img/checkbox-unchecked.png");
   background-size: cover;
-  background-position:center ;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -467,14 +470,13 @@ div.content-wrapper {
 // .checkmark::after {
 //   content: "";
 //   position: absolute;
-//   display: none;               
+//   display: none;
 // }
-
 
 /* Show the checkmark when checked */
 // input:checked ~ .checkmark::after {
 //   display: block;
-// } 
+// }
 
 .column-bottom-5 {
   display: flex;
@@ -483,11 +485,11 @@ div.content-wrapper {
   width: 100%;
   margin-top: 50px;
   // padding-bottom: 50px;
-  
+
   .column-bottom-5 .item {
     width: 14%;
   }
-  
+
   .item {
     .title {
       @include fontLatoRegular;
@@ -501,7 +503,7 @@ div.content-wrapper {
         line-height: 18px;
       }
     }
-    
+
     .text {
       @include fontLatoBold;
       font-size: 24px;
@@ -514,7 +516,6 @@ div.content-wrapper {
       }
     }
   }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -529,7 +530,6 @@ div.content-wrapper {
     width: 49%;
   }
 }
-
 
 .section__feedback {
   display: flex;
@@ -549,7 +549,7 @@ div.content-wrapper {
       @media (max-width: $mobile) {
         max-width: unset;
       }
-      
+
       img {
         display: block;
         width: 100%;
@@ -557,14 +557,13 @@ div.content-wrapper {
         // height: 360px;
         max-height: 360px;
         // max-width: 640px;
-  
+
         object-fit: cover;
       }
     }
 
     .swiper-slide > .slide-wrapper {
-
-      height: 100%;;
+      height: 100%;
 
       .feedback-content__wrapper {
         display: flex;
@@ -587,7 +586,7 @@ div.content-wrapper {
           top: -12px;
           background-image: url("../img/quote.svg");
           background-size: cover;
-          background-position:center ;
+          background-position: center;
           background-repeat: no-repeat;
         }
 
@@ -596,7 +595,7 @@ div.content-wrapper {
           width: 100%;
           height: 100%;
           max-height: 360px;
-    
+
           object-fit: cover;
         }
 
@@ -619,8 +618,6 @@ div.content-wrapper {
       }
     }
 
-
-
     // .swiper-slide {
     //   width: 60%;
     // }
@@ -632,13 +629,13 @@ div.content-wrapper {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  
+
   .section__wrapper {
     box-sizing: content-box;
     max-width: $desktop-content;
     margin: 0 32px;
     width: 100%;
-    
+
     @media (max-width: $mobile) {
       margin: 0 16px;
     }
@@ -670,19 +667,19 @@ div.content-wrapper {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      flex: 1 1 auto; 
+      flex: 1 1 auto;
       white-space: nowrap;
 
       // width: 100%;
       height: 100%;
-      
+
       padding: 0 32px;
 
       cursor: pointer;
       @include fontLatoRegular;
       font-size: 20px;
       line-height: 24px;
-      
+
       letter-spacing: -0.2px;
       color: $color_w;
 
@@ -723,12 +720,12 @@ div.content-wrapper {
       font-size: 20px;
       line-height: 24px;
       color: $color_w;
-      transition: all 0.3s ease-in-out ;
+      transition: all 0.3s ease-in-out;
 
       &.active {
         color: $color_gr;
         background-color: rgba(12, 136, 76, 0.2);
-        transition: all 0.3s ease-in-out ;
+        transition: all 0.3s ease-in-out;
       }
     }
   }
@@ -747,7 +744,7 @@ div.content-wrapper {
         display: block;
       }
     }
-    
+
     .table__header {
       @include fontLatoLight;
       font-size: 24px;
@@ -766,7 +763,6 @@ div.content-wrapper {
 
       margin-bottom: 30px;
     }
-
 
     .table__content {
       display: flex;
@@ -790,7 +786,7 @@ div.content-wrapper {
           border: 1px solid $color_border;
           border-width: 1px 1px 0 1px;
 
-          font-family: 'Inter';
+          font-family: "Inter";
           font-style: normal;
           font-weight: 700;
           font-size: 18px;
@@ -813,7 +809,7 @@ div.content-wrapper {
           border: 1px solid $color_border;
           border-width: 1px 1px 0 0;
 
-          font-family: 'Inter';
+          font-family: "Inter";
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
@@ -833,7 +829,7 @@ div.content-wrapper {
     .table__options {
       display: flex;
       margin-bottom: 42px;
-      gap: 32px; 
+      gap: 32px;
 
       @media (max-width: 900px) {
         flex-direction: column;
@@ -878,7 +874,7 @@ div.content-wrapper {
         padding: 20px 24px 30px;
         max-height: 200px;
         overflow-y: auto;
-        
+
         @media (max-width: 900px) {
           max-height: unset;
           overflow-y: unset;
@@ -905,7 +901,9 @@ div.content-wrapper {
           }
 
           img {
-            width: calc(50% - 10px); /* subtract some pixels for margin if you need */
+            width: calc(
+              50% - 10px
+            ); /* subtract some pixels for margin if you need */
             height: auto;
             // max-height: 134px;
             // object-fit: cover;
@@ -918,17 +916,13 @@ div.content-wrapper {
           @media (max-width: 640px) {
             flex-direction: column;
             gap: 16px;
-            
 
             img {
               max-height: unset;
               width: 100%;
-            
             }
           }
         }
-
-
       }
     }
 
@@ -936,7 +930,7 @@ div.content-wrapper {
       &-title {
         @include fontLatoRegular;
         font-size: 18px;
-        line-height: 24px;  
+        line-height: 24px;
         color: $color_gr;
         margin-bottom: 12px;
       }
@@ -944,7 +938,7 @@ div.content-wrapper {
       &-text {
         @include fontLatoBold;
         font-size: 24px;
-        line-height: 24px;  
+        line-height: 24px;
         color: $color_gr;
       }
     }
@@ -964,10 +958,10 @@ div.content-wrapper {
 
   .section__wrapper {
     display: flex;
-    width: 100%;;
+    width: 100%;
     max-width: $desktop-content;
     margin: 64px auto;
-    color: #FCFCFC;
+    color: #fcfcfc;
 
     @media (max-width: 1024px) {
       flex-direction: column;
@@ -982,9 +976,10 @@ div.content-wrapper {
     @media (max-width: 1024px) {
       flex: 1 1 auto;
       justify-content: center;
-      margin-bottom: 32px;;
+      margin-bottom: 32px;
 
-      span.request-title,  span.request-text { 
+      span.request-title,
+      span.request-text {
         text-align: center;
       }
     }
@@ -1004,7 +999,7 @@ div.content-wrapper {
 
     span.request-text {
       display: flex;
-      flex-direction: column; 
+      flex-direction: column;
 
       @include fontLatoBold;
       font-size: 24px;
@@ -1051,7 +1046,201 @@ div.content-wrapper {
       white-space: nowrap;
       text-decoration: unset;
 
-      color: #FCFCFC;
+      color: #fcfcfc;
+
+      @media (max-width: $mobile) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+.section_other-projects {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  // background-color: $color_gr;
+
+  @media (max-width: $mobile) {
+    padding: 0 16px;
+  }
+
+  .section__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1189px;
+    margin: 0 auto;
+
+    .other-project__row {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+
+      @media (max-width: 1100px) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        flex-wrap: unset;
+      }
+
+      .other-project__card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        text-decoration: none;
+        border: 1px solid #a6a6a6;
+        position: relative;
+
+        &:hover img {
+          opacity: 0.7;
+          filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+          transition: all ease-in-out 0.2s;
+        } 
+
+        @media (max-width: 1100px) {
+          &:nth-child(1), 
+          &:nth-child(2) {
+            flex: 1 1 47%;
+          }
+          
+          &:nth-child(3) {
+            flex: 0 1 50% ;
+          }
+        }
+
+        @media (max-width: 768px) {
+          // flex: 1 1 100% !important;
+          width: 100%;
+        }
+
+        .sale__wrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 3;
+          width: 110px;
+
+          .sale-item {
+            @include fontLatoRegular;
+            height: 36px;
+            background: #2e81eb;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            color: #fff;
+            text-transform: uppercase;
+          }
+
+          .sale-blue {
+            background: #2e81eb;
+          }
+
+          .sale-red {
+            background: #C10813;
+          }
+        }
+
+        .card-image {
+          width: 100%;
+          height: 260px;
+          transition: all ease-in-out 0.2s;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card-content {
+          background-color: #a6a6a6;
+          color: white;
+          @include fontLatoRegular;
+          padding: 15px 36px 10px;
+
+          .card-title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 22px;
+            padding-bottom: 15px;
+          }
+
+          .card__wrapper {
+            display: flex;
+            gap: 16px;
+
+            .card-content__column {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              flex: 1;
+
+              .title {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+              }
+              .text {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+
+        .card-price {
+          @include fontLatoRegular;
+          padding: 10px 35px 13px;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+          color: $color_gr;
+        }
+      }
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .see-more__button {
+      @include fontLatoRegular;
+      font-size: 18px;
+      line-height: 22px;
+      white-space: nowrap;
+      text-transform: uppercase;
+      text-decoration: unset;
+      color: $color_gr;
+      border: 1px solid $color_gr;
+      padding: 17px 77px;
+      margin: 30px 0 60px;
+
+      @media (max-width: $mobile) {
+        padding: 17px 48px;
+      }
+    }
+
+    &__phone {
+      @include fontLatoBold;
+      font-size: 32px;
+      line-height: 41px;
+      white-space: nowrap;
+      text-decoration: unset;
+
+      color: #fcfcfc;
 
       @media (max-width: $mobile) {
         font-size: 24px;
