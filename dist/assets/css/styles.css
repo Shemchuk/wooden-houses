@@ -515,17 +515,18 @@ div.content-wrapper {
 
 /* Create the checkmark/indicator (hidden when not checked) */
 /* Show the checkmark when checked */
-.column-bottom-5 {
+.section__description .column-bottom-5 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   margin-top: 50px;
 }
-.column-bottom-5 .column-bottom-5 .item {
-  width: 14%;
+.section__description .column-bottom-5 .item {
+  display: flex;
+  flex-direction: column;
 }
-.column-bottom-5 .item .title {
+.section__description .column-bottom-5 .item .title {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -537,12 +538,12 @@ div.content-wrapper {
   margin-bottom: 12px;
 }
 @media (max-width: 768px) {
-  .column-bottom-5 .item .title {
+  .section__description .column-bottom-5 .item .title {
     font-size: 16px;
     line-height: 18px;
   }
 }
-.column-bottom-5 .item .text {
+.section__description .column-bottom-5 .item .text {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -551,23 +552,19 @@ div.content-wrapper {
   font-size: 24px;
   line-height: 24px;
   color: #10252E;
+  margin-top: auto;
 }
 @media (max-width: 768px) {
-  .column-bottom-5 .item .text {
+  .section__description .column-bottom-5 .item .text {
     font-size: 22px;
     line-height: 22px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .column-bottom-5 .item {
-    width: 30%;
+  .section__description .column-bottom-5 .item {
+    width: 48%;
     margin-bottom: 40px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .column-bottom-5 .item {
-    width: 49%;
   }
 }
 .section__feedback {
